@@ -355,7 +355,7 @@
 			<visible>false</visible>
         </control>
         <control type="button" id="4001">
-            <!-- Addon Matches -->
+            <!-- Choose Stream -->
             <posx>285</posx>
             <posy>280</posy>
             <width>200</width>
@@ -370,7 +370,7 @@
             <font>font13</font>
             <textcolor>white</textcolor>
 			<focusedcolor>cyan</focusedcolor>
-            <label>Addon Matches</label>
+            <label>Choose Stream</label>
         </control>
         <control type="button" id="4007">
             <!-- Stream Setup -->
