@@ -30,7 +30,7 @@
             <posy>0</posy>
             <width>1280</width>
             <height>720</height>
-            <texture>grey.png</texture>
+            <texture>black.png</texture>
             <visible>true</visible>
         </control>
 
@@ -73,7 +73,7 @@
                 <width>1280</width>
                 <height>452</height>
                 <texture>grey.png</texture>
-                <visible>!Player.HasMedia</visible>
+                <visible>true</visible>
                 <aspectratio>scale</aspectratio>
                 <align>center</align>
                 <aligny>center</aligny>
@@ -101,7 +101,7 @@
                 <posy>-60</posy>
                 <width>1280</width>
                 <height>58</height>
-                <texture>black.png</texture>
+                <texture>black-back.png</texture>
                 <aspectratio>-</aspectratio>
                 <align>center</align>
                 <aligny>center</aligny>

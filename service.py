@@ -34,7 +34,7 @@ class Service(object):
     def __init__(self):
         self.database = source.Database()
         self.database.initialize(self.onInit)
-            
+
     def onInit(self, success):
         if success:
             self.database.updateChannelAndProgramListCaches(self.onCachesUpdated)
@@ -55,7 +55,7 @@ if __name__ == '__main__':
         ADDON = xbmcaddon.Addon('script.tvguide.fullscreen')
         if ADDON.getSetting('autostart') == "true":
             xbmc.executebuiltin("RunAddon(script.tvguide.fullscreen)")
-        
+
         if ADDON.getSetting('background.service') == 'true':
             monitor = xbmc.Monitor()
             xbmc.log("[script.tvguide.fullscreen] Background service started...", xbmc.LOGDEBUG)
@@ -80,7 +80,9 @@ if __name__ == '__main__':
                     break
                 xbmc.log("[script.tvguide.fullscreen] Service now triggered...", xbmc.LOGDEBUG)
                 Service()
-                
+                if ADDON.getSetting('service.addon.folders') == "true":
+                    xbmc.executebuiltin('RunScript(special://home/addons/script.tvguide.fullscreen/ReloadAddonFolders.py)')
+
     except source.SourceNotConfiguredException:
         pass  # ignore
     except Exception, ex:

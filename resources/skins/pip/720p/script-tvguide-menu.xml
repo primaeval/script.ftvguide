@@ -80,7 +80,7 @@
             <viewtype label="3D list">list</viewtype>
             <orientation>vertical</orientation>
 
-            <itemlayout width="200" height="40">
+            <itemlayout width="200" height="44">
                 <control type="image">
                     <posx>0</posx>
                     <posy>0</posy>
@@ -103,7 +103,7 @@
                     <info>ListItem.Label</info>
                 </control>
             </itemlayout>
-            <focusedlayout height="40" width="200">
+            <focusedlayout height="44" width="200">
                 <control type="image">
                     <posx>0</posx>
                     <posy>0</posy>

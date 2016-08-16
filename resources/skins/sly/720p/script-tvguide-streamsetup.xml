@@ -18,7 +18,7 @@
             <posy>0</posy>
             <width>1280</width>
             <height>720</height>
-            <texture>grey.png</texture>
+            <texture>black.png</texture>
             <visible>true</visible>
         </control>
         <control type="image">
@@ -40,10 +40,10 @@
 
         <control type="image" id="4023">
             <description>Channel Logo</description>
-            <posx>180r</posx>
-            <posy>0</posy>
-            <width>150</width>
-            <height>150</height>
+            <posx>20</posx>
+            <posy>60</posy>
+            <width>100</width>
+            <height>100</height>
             <aspectratio>keep</aspectratio>
             <fadetime>500</fadetime>
             <texture>-</texture>
@@ -52,14 +52,15 @@
 
         <control type="label" id="4024">
             <description>Channel Name</description>
-            <posx>40</posx>
+            <posx>20</posx>
             <posy>40</posy>
-            <width>500</width>
+            <width>260</width>
             <height>40</height>
             <font>font13_title</font>
             <textcolor>cyan</textcolor>
-            <label></label>
+            <label/>
             <align>left</align>
+            <scroll>true</scroll>
         </control>
 
         <control type="image">
@@ -79,17 +80,19 @@
             <height>40</height>
             <label>$ADDON[script.tvguide.fullscreen 30600]</label>
             <align>left</align>
+            <visible>false</visible>
         </control>
 
         <control type="button" id="101">
-            <posx>360</posx>
+            <posx>300</posx>
             <posy>40</posy>
-            <width>173</width>
+            <width>170</width>
             <height>40</height>
             <align>center</align>
             <aligny>center</aligny>
             <font>font13</font>
-            <textcolor>ffffffff</textcolor>
+            <textcolor>white</textcolor>
+            <focusedcolor>cyan</focusedcolor>
             <label>strm|m3u</label>
             <texturefocus>menu-grey-focus.png</texturefocus>
             <texturenofocus>menu-grey.png</texturenofocus>
@@ -98,14 +101,15 @@
             <ondown>1001</ondown>
         </control>
         <control type="button" id="102">
-            <posx>534</posx>
+            <posx>500</posx>
             <posy>40</posy>
-            <width>174</width>
+            <width>170</width>
             <height>40</height>
             <align>center</align>
             <aligny>center</aligny>
             <font>font13</font>
-            <textcolor>ffffffff</textcolor>
+            <textcolor>white</textcolor>
+            <focusedcolor>cyan</focusedcolor>
             <label>$ADDON[script.tvguide.fullscreen 30602]</label>
             <texturefocus>menu-grey-focus.png</texturefocus>
             <texturenofocus>menu-grey.png</texturenofocus>
@@ -114,14 +118,15 @@
             <ondown>2001</ondown>
         </control>
         <control type="button" id="103">
-            <posx>709</posx>
+            <posx>700</posx>
             <posy>40</posy>
-            <width>173</width>
+            <width>170</width>
             <height>40</height>
             <align>center</align>
             <aligny>center</aligny>
             <font>font13</font>
-            <textcolor>ffffffff</textcolor>
+            <textcolor>white</textcolor>
+            <focusedcolor>cyan</focusedcolor>
             <label>$ADDON[script.tvguide.fullscreen 30603]</label>
             <texturefocus>menu-grey-focus.png</texturefocus>
             <texturenofocus>menu-grey.png</texturenofocus>
@@ -131,14 +136,15 @@
         </control>
 
         <control type="button" id="104">
-            <posx>884</posx>
+            <posx>900</posx>
             <posy>40</posy>
-            <width>173</width>
+            <width>170</width>
             <height>40</height>
             <align>center</align>
             <aligny>center</aligny>
             <font>font13</font>
-            <textcolor>ffffffff</textcolor>
+            <textcolor>white</textcolor>
+            <focusedcolor>cyan</focusedcolor>
             <label>Browse</label>
             <texturefocus>menu-grey-focus.png</texturefocus>
             <texturenofocus>menu-grey.png</texturenofocus>
@@ -149,7 +155,7 @@
 
 
         <control type="group" id="1000">
-            <posx>40</posx>
+            <posx>0</posx>
             <posy>120</posy>
             <width>800</width>
             <height>340</height>
@@ -161,20 +167,21 @@
                 <width>560</width>
                 <height>80</height>
                 <align>left</align>
-                <label>Choose stream if several are found in the file.</label>
+                <label>Choose stream or substream from strm|m3u playlist.</label>
                 <wrapmultiline>true</wrapmultiline>
             </control>
 
             <control type="button" id="1001">
                 <posx>140</posx>
                 <posy>160</posy>
-                <width>173</width>
-                <height>40</height>
+                <width>200</width>
+                <height>50</height>
                 <label>strm|m3u File</label>
                 <align>center</align>
                 <aligny>center</aligny>
                 <font>font13</font>
-                <textcolor>ffffffff</textcolor>
+                <textcolor>white</textcolor>
+            <focusedcolor>cyan</focusedcolor>
                 <texturefocus>menu-grey-focus.png</texturefocus>
                 <texturenofocus>menu-grey.png</texturenofocus>
                 <onup>101</onup>
@@ -193,14 +200,15 @@
 
 
             <control type="button" id="1002">
-                <posx>518</posx>
+                <posx>500</posx>
                 <posy>530</posy>
-                <width>240</width>
+                <width>170</width>
                 <height>40</height>
                 <align>center</align>
                 <aligny>center</aligny>
                 <font>font13</font>
-                <textcolor>ffffffff</textcolor>
+                <textcolor>white</textcolor>
+            <focusedcolor>cyan</focusedcolor>
                 <label>$ADDON[script.tvguide.fullscreen 30604]</label>
                 <texturefocus>menu-grey-focus.png</texturefocus>
                 <texturenofocus>menu-grey.png</texturenofocus>
@@ -209,14 +217,15 @@
                 <onright>1003</onright>
             </control>
             <control type="button" id="1003">
-                <posx>759</posx>
+                <posx>700</posx>
                 <posy>530</posy>
                 <width>170</width>
                 <height>40</height>
                 <align>center</align>
                 <aligny>center</aligny>
                 <font>font13</font>
-                <textcolor>ffffffff</textcolor>
+                <textcolor>white</textcolor>
+            <focusedcolor>cyan</focusedcolor>
                 <label>$ADDON[script.tvguide.fullscreen 30605]</label>
                 <texturefocus>menu-grey-focus.png</texturefocus>
                 <texturenofocus>menu-grey.png</texturenofocus>
@@ -225,14 +234,15 @@
                 <onright>1004</onright>
             </control>
             <control type="button" id="1004">
-                <posx>930</posx>
+                <posx>900</posx>
                 <posy>530</posy>
                 <width>170</width>
                 <height>40</height>
                 <align>center</align>
                 <aligny>center</aligny>
                 <font>font13</font>
-                <textcolor>ffffffff</textcolor>
+                <textcolor>white</textcolor>
+            <focusedcolor>cyan</focusedcolor>
                 <label>$ADDON[script.tvguide.fullscreen 30606]</label>
                 <texturefocus>menu-grey-focus.png</texturefocus>
                 <texturenofocus>menu-grey.png</texturenofocus>
@@ -244,7 +254,7 @@
 
         <control type="group" id="2000">
             <!-- Favourites -->
-            <posx>40</posx>
+            <posx>0</posx>
             <posy>120</posy>
             <width>800</width>
             <height>340</height>
@@ -255,15 +265,15 @@
                 <posy>60</posy>
                 <width>350</width>
                 <height>80</height>
-                <align>justify</align>
-                <label>$ADDON[script.tvguide.fullscreen 30620]</label>
+                <align>left</align>
+                <label>Choose a Favourite Stream.</label>
                 <wrapmultiline>true</wrapmultiline>
             </control>
 
             <control type="list" id="2001">
                 <posx>550</posx>
                 <posy>20</posy>
-                <width>500</width>
+                <width>400</width>
                 <height>480</height>
                 <viewtype label="list">list</viewtype>
                 <orientation>vertical</orientation>
@@ -271,30 +281,31 @@
                 <onleft>102</onleft>
                 <onright>2002</onright>
 
-                <itemlayout width="560" height="40">
+                <itemlayout width="400" height="40">
                     <control type="image">
                         <posx>0</posx>
                         <posy>0</posy>
-                        <width>560</width>
+                        <width>400</width>
                         <height>38</height>
                         <texture>menu-grey.png</texture>
                     </control>
                     <control type="label">
                         <posx>16</posx>
                         <posy>0</posy>
-                        <width>560</width>
+                        <width>400</width>
                         <height>38</height>
                         <aligny>center</aligny>
                         <font>font13</font>
-                        <textcolor>ffffffff</textcolor>
+                        <textcolor>white</textcolor>
+                        <focusedcolor>cyan</focusedcolor>
                         <info>ListItem.Label</info>
                     </control>
                 </itemlayout>
-                <focusedlayout width="560" height="40">
+                <focusedlayout width="400" height="40">
                     <control type="image">
                         <posx>0</posx>
                         <posy>0</posy>
-                        <width>560</width>
+                        <width>400</width>
                         <height>38</height>
                         <texture>menu-grey.png</texture>
                         <visible>!Control.HasFocus(2001)</visible>
@@ -302,7 +313,7 @@
                     <control type="image">
                         <posx>0</posx>
                         <posy>0</posy>
-                        <width>560</width>
+                        <width>400</width>
                         <height>38</height>
                         <texture>menu-grey-focus.png</texture>
                         <visible>Control.HasFocus(2001)</visible>
@@ -310,15 +321,16 @@
                     <control type="label">
                         <posx>16</posx>
                         <posy>0</posy>
-                        <width>560</width>
+                        <width>400</width>
                         <height>38</height>
                         <aligny>center</aligny>
                         <font>font13</font>
-                        <textcolor>ffffffff</textcolor>
+                        <textcolor>cyan</textcolor>
+                        <focusedcolor>cyan</focusedcolor>
                         <info>ListItem.Label</info>
                     </control>
                     <control type="image">
-                        <posx>465</posx>
+                        <posx>25r</posx>
                         <posy>9</posy>
                         <width>20</width>
                         <height>20</height>
@@ -328,14 +340,15 @@
             </control>
 
             <control type="button" id="2002">
-                <posx>518</posx>
+                <posx>500</posx>
                 <posy>530</posy>
-                <width>240</width>
+                <width>170</width>
                 <height>40</height>
                 <align>center</align>
                 <aligny>center</aligny>
                 <font>font13</font>
-                <textcolor>ffffffff</textcolor>
+                <textcolor>white</textcolor>
+            <focusedcolor>cyan</focusedcolor>
                 <label>$ADDON[script.tvguide.fullscreen 30604]</label>
                 <texturefocus>menu-grey-focus.png</texturefocus>
                 <texturenofocus>menu-grey.png</texturenofocus>
@@ -344,14 +357,15 @@
                 <onright>2003</onright>
             </control>
             <control type="button" id="2003">
-                <posx>759</posx>
+                <posx>700</posx>
                 <posy>530</posy>
                 <width>170</width>
                 <height>40</height>
                 <align>center</align>
                 <aligny>center</aligny>
                 <font>font13</font>
-                <textcolor>ffffffff</textcolor>
+                <textcolor>white</textcolor>
+            <focusedcolor>cyan</focusedcolor>
                 <label>$ADDON[script.tvguide.fullscreen 30605]</label>
                 <texturefocus>menu-grey-focus.png</texturefocus>
                 <texturenofocus>menu-grey.png</texturenofocus>
@@ -360,14 +374,15 @@
                 <onright>2004</onright>
             </control>
             <control type="button" id="2004">
-                <posx>930</posx>
+                <posx>900</posx>
                 <posy>530</posy>
                 <width>170</width>
                 <height>40</height>
                 <align>center</align>
                 <aligny>center</aligny>
                 <font>font13</font>
-                <textcolor>ffffffff</textcolor>
+                <textcolor>white</textcolor>
+            <focusedcolor>cyan</focusedcolor>
                 <label>$ADDON[script.tvguide.fullscreen 30606]</label>
                 <texturefocus>menu-grey-focus.png</texturefocus>
                 <texturenofocus>menu-grey.png</texturenofocus>
@@ -380,7 +395,7 @@
 
         <control type="group" id="3000">
             <!-- Addons -->
-            <posx>40</posx>
+            <posx>0</posx>
             <posy>120</posy>
             <width>1280</width>
             <height>600</height>
@@ -466,6 +481,7 @@
                 <textcolor>cyan</textcolor>
             </control>
             <control type="textbox" id="3004">
+                <description>addon info</description>
                 <posx>40</posx>
                 <posy>310</posy>
                 <width>350</width>
@@ -474,12 +490,13 @@
                 <align>left</align>
                 <wrapmultiline>true</wrapmultiline>
                 <autoscroll time="3600" delay="6000" repeat="6000">true</autoscroll>
+                <visible>!Player.HasMedia</visible>
             </control>
 
             <control type="list" id="3002">
                 <posx>550</posx>
                 <posy>20</posy>
-                <width>500</width>
+                <width>400</width>
                 <height>480</height>
                 <viewtype label="list">list</viewtype>
                 <orientation>vertical</orientation>
@@ -487,30 +504,31 @@
                 <onleft>3001</onleft>
                 <onright>3005</onright>
 
-                <itemlayout width="560" height="40">
+                <itemlayout width="400" height="40">
                     <control type="image">
                         <posx>0</posx>
                         <posy>0</posy>
-                        <width>560</width>
+                        <width>400</width>
                         <height>38</height>
                         <texture>menu-grey.png</texture>
                     </control>
                     <control type="label">
                         <posx>16</posx>
                         <posy>0</posy>
-                        <width>560</width>
+                        <width>400</width>
                         <height>38</height>
                         <aligny>center</aligny>
                         <font>font13</font>
-                        <textcolor>ffffffff</textcolor>
+                        <textcolor>white</textcolor>
+                        <focusedcolor>cyan</focusedcolor>
                         <info>ListItem.Label</info>
                     </control>
                 </itemlayout>
-                <focusedlayout width="560" height="40">
+                <focusedlayout width="400" height="40">
                     <control type="image">
                         <posx>0</posx>
                         <posy>0</posy>
-                        <width>560</width>
+                        <width>400</width>
                         <height>38</height>
                         <texture>menu-grey.png</texture>
                         <visible>!Control.HasFocus(3002)</visible>
@@ -518,7 +536,7 @@
                     <control type="image">
                         <posx>0</posx>
                         <posy>0</posy>
-                        <width>560</width>
+                        <width>400</width>
                         <height>38</height>
                         <texture>menu-grey-focus.png</texture>
                         <visible>Control.HasFocus(3002)</visible>
@@ -526,15 +544,16 @@
                     <control type="label">
                         <posx>16</posx>
                         <posy>0</posy>
-                        <width>560</width>
+                        <width>400</width>
                         <height>38</height>
                         <aligny>center</aligny>
                         <font>font13</font>
-                        <textcolor>ffffffff</textcolor>
+                        <textcolor>cyan</textcolor>
+                        <focusedcolor>cyan</focusedcolor>
                         <info>ListItem.Label</info>
                     </control>
                     <control type="image">
-                        <posx>465</posx>
+                        <posx>25r</posx>
                         <posy>9</posy>
                         <width>20</width>
                         <height>20</height>
@@ -544,14 +563,15 @@
             </control>
 
             <control type="button" id="3005">
-                <posx>518</posx>
+                <posx>500</posx>
                 <posy>530</posy>
-                <width>240</width>
+                <width>170</width>
                 <height>40</height>
                 <align>center</align>
                 <aligny>center</aligny>
                 <font>font13</font>
-                <textcolor>ffffffff</textcolor>
+                <textcolor>white</textcolor>
+                <focusedcolor>cyan</focusedcolor>
                 <label>$ADDON[script.tvguide.fullscreen 30604]</label>
                 <texturefocus>menu-grey-focus.png</texturefocus>
                 <texturenofocus>menu-grey.png</texturenofocus>
@@ -560,14 +580,15 @@
                 <onright>3006</onright>
             </control>
             <control type="button" id="3006">
-                <posx>759</posx>
+                <posx>700</posx>
                 <posy>530</posy>
                 <width>170</width>
                 <height>40</height>
                 <align>center</align>
                 <aligny>center</aligny>
                 <font>font13</font>
-                <textcolor>ffffffff</textcolor>
+                <textcolor>white</textcolor>
+                <focusedcolor>cyan</focusedcolor>
                 <label>$ADDON[script.tvguide.fullscreen 30605]</label>
                 <texturefocus>menu-grey-focus.png</texturefocus>
                 <texturenofocus>menu-grey.png</texturenofocus>
@@ -576,14 +597,15 @@
                 <onright>3007</onright>
             </control>
             <control type="button" id="3007">
-                <posx>930</posx>
+                <posx>900</posx>
                 <posy>530</posy>
                 <width>170</width>
                 <height>40</height>
                 <align>center</align>
                 <aligny>center</aligny>
                 <font>font13</font>
-                <textcolor>ffffffff</textcolor>
+                <textcolor>white</textcolor>
+                <focusedcolor>cyan</focusedcolor>
                 <label>$ADDON[script.tvguide.fullscreen 30606]</label>
                 <texturefocus>menu-grey-focus.png</texturefocus>
                 <texturenofocus>menu-grey.png</texturenofocus>
@@ -595,7 +617,7 @@
 
         <control type="group" id="4000">
             <!-- browse -->
-            <posx>40</posx>
+            <posx>0</posx>
             <posy>120</posy>
             <width>1280</width>
             <height>600</height>
@@ -651,7 +673,7 @@
                         <height>40</height>
                         <aligny>center</aligny>
                         <font>font13</font>
-                        <textcolor>ffffffff</textcolor>
+                        <textcolor>white</textcolor>
                         <info>ListItem.Label</info>
                     </control>
                 </itemlayout>
@@ -686,7 +708,8 @@
                         <height>40</height>
                         <aligny>center</aligny>
                         <font>font13</font>
-                        <textcolor>ffffffff</textcolor>
+                        <textcolor>white</textcolor>
+                        <focusedcolor>cyan</focusedcolor>
                         <info>ListItem.Label</info>
                     </control>
                 </focusedlayout>
@@ -699,7 +722,8 @@
                 <height>38</height>
                 <aligny>center</aligny>
                 <font>font13</font>
-                <textcolor>ffffffff</textcolor>
+                <textcolor>white</textcolor>
+                <focusedcolor>cyan</focusedcolor>
                 <label>Click and Wait to Load</label>
             </control>
 
@@ -719,7 +743,7 @@
                     <control type="image">
                         <posx>0</posx>
                         <posy>0</posy>
-                        <width>560</width>
+                        <width>300</width>
                         <height>38</height>
                         <texture>menu-grey.png</texture>
                     </control>
@@ -730,7 +754,8 @@
                         <height>38</height>
                         <aligny>center</aligny>
                         <font>font13</font>
-                        <textcolor>ffffffff</textcolor>
+                        <textcolor>white</textcolor>
+                        <focusedcolor>cyan</focusedcolor>
                         <info>ListItem.Label</info>
                     </control>
                 </itemlayout>
@@ -758,7 +783,8 @@
                         <height>38</height>
                         <aligny>center</aligny>
                         <font>font13</font>
-                        <textcolor>ffffffff</textcolor>
+                        <textcolor>cyan</textcolor>
+                        <focusedcolor>cyan</focusedcolor>
                         <info>ListItem.Label</info>
                     </control>
                     <control type="image">
@@ -772,59 +798,63 @@
             </control>
 
             <control type="label" id="4003">
-                <posx>40</posx>
+                <description>addon name</description>
+                <posx>20</posx>
                 <posy>280</posy>
-                <width>330</width>
+                <width>350</width>
                 <height>40</height>
                 <label>[B][/B]</label>
                 <textcolor>cyan</textcolor>
             </control>
             <control type="textbox" id="4004">
-                <posx>40</posx>
+                <description>addon info text</description>
+                <posx>20</posx>
                 <posy>310</posy>
-                <width>350</width>
-                <height>100</height>
-                <label/>
+                <width>370</width>
+                <height>260</height>
+                <label>-</label>
                 <align>left</align>
                 <wrapmultiline>true</wrapmultiline>
                 <autoscroll time="3600" delay="6000" repeat="6000">true</autoscroll>
+                <visible>!Player.HasMedia</visible>
             </control>
 
             <control type="list" id="4002">
                 <posx>750</posx>
                 <posy>20</posy>
-                <width>300</width>
+                <width>400</width>
                 <height>480</height>
                 <viewtype label="list">list</viewtype>
                 <orientation>vertical</orientation>
                 <focusposition>7</focusposition>
                 <onleft>4008</onleft>
-                <onright>4009</onright>
+                <onright>4005</onright>
 
-                <itemlayout width="300" height="40">
+                <itemlayout width="400" height="40">
                     <control type="image">
                         <posx>0</posx>
                         <posy>0</posy>
-                        <width>300</width>
+                        <width>400</width>
                         <height>38</height>
                         <texture>menu-grey.png</texture>
                     </control>
                     <control type="label">
                         <posx>16</posx>
                         <posy>0</posy>
-                        <width>300</width>
+                        <width>400</width>
                         <height>38</height>
                         <aligny>center</aligny>
                         <font>font13</font>
-                        <textcolor>ffffffff</textcolor>
+                        <textcolor>white</textcolor>
+                        <focusedcolor>cyan</focusedcolor>
                         <info>ListItem.Label</info>
                     </control>
                 </itemlayout>
-                <focusedlayout width="300" height="40">
+                <focusedlayout width="400" height="40">
                     <control type="image">
                         <posx>0</posx>
                         <posy>0</posy>
-                        <width>300</width>
+                        <width>400</width>
                         <height>38</height>
                         <texture>menu-grey.png</texture>
                         <visible>!Control.HasFocus(4002)</visible>
@@ -832,7 +862,7 @@
                     <control type="image">
                         <posx>0</posx>
                         <posy>0</posy>
-                        <width>300</width>
+                        <width>400</width>
                         <height>38</height>
                         <texture>menu-grey-focus.png</texture>
                         <visible>Control.HasFocus(4002)</visible>
@@ -840,11 +870,12 @@
                     <control type="label">
                         <posx>16</posx>
                         <posy>0</posy>
-                        <width>300</width>
+                        <width>400</width>
                         <height>38</height>
                         <aligny>center</aligny>
                         <font>font13</font>
-                        <textcolor>ffffffff</textcolor>
+                        <textcolor>cyan</textcolor>
+                        <focusedcolor>cyan</focusedcolor>
                         <info>ListItem.Label</info>
                     </control>
                     <control type="image">
@@ -857,47 +888,34 @@
                 </focusedlayout>
             </control>
 
-            <control type="button" id="4009">
-                <posx>390</posx>
-                <posy>530</posy>
-                <width>170</width>
-                <height>40</height>
-                <align>center</align>
-                <aligny>center</aligny>
-                <font>font13</font>
-                <textcolor>ffffffff</textcolor>
-                <label>Add Folder</label>
-                <texturefocus>menu-grey-focus.png</texturefocus>
-                <texturenofocus>menu-grey.png</texturenofocus>
-                <onup>104</onup>
-                <onleft>4002</onleft>
-                <onright>4005</onright>
-            </control>
+
             <control type="button" id="4005">
-                <posx>570</posx>
+                <posx>500</posx>
                 <posy>530</posy>
                 <width>170</width>
                 <height>40</height>
                 <align>center</align>
                 <aligny>center</aligny>
                 <font>font13</font>
-                <textcolor>ffffffff</textcolor>
+                <textcolor>white</textcolor>
+                <focusedcolor>cyan</focusedcolor>
                 <label>$ADDON[script.tvguide.fullscreen 30604]</label>
                 <texturefocus>menu-grey-focus.png</texturefocus>
                 <texturenofocus>menu-grey.png</texturenofocus>
                 <onup>104</onup>
-                <onleft>4009</onleft>
+                <onleft>4002</onleft>
                 <onright>4006</onright>
             </control>
             <control type="button" id="4006">
-                <posx>750</posx>
+                <posx>700</posx>
                 <posy>530</posy>
                 <width>170</width>
                 <height>40</height>
                 <align>center</align>
                 <aligny>center</aligny>
                 <font>font13</font>
-                <textcolor>ffffffff</textcolor>
+                <textcolor>white</textcolor>
+                <focusedcolor>cyan</focusedcolor>
                 <label>$ADDON[script.tvguide.fullscreen 30605]</label>
                 <texturefocus>menu-grey-focus.png</texturefocus>
                 <texturenofocus>menu-grey.png</texturenofocus>
@@ -906,21 +924,38 @@
                 <onright>4007</onright>
             </control>
             <control type="button" id="4007">
-                <posx>930</posx>
+                <posx>900</posx>
                 <posy>530</posy>
                 <width>170</width>
                 <height>40</height>
                 <align>center</align>
                 <aligny>center</aligny>
                 <font>font13</font>
-                <textcolor>ffffffff</textcolor>
+                <textcolor>white</textcolor>
+                <focusedcolor>cyan</focusedcolor>
                 <label>$ADDON[script.tvguide.fullscreen 30606]</label>
                 <texturefocus>menu-grey-focus.png</texturefocus>
                 <texturenofocus>menu-grey.png</texturenofocus>
                 <onup>104</onup>
                 <onleft>4006</onleft>
+                <onright>4009</onright>
             </control>
-
+            <control type="button" id="4009">
+                <posx>1100</posx>
+                <posy>530</posy>
+                <width>170</width>
+                <height>40</height>
+                <align>center</align>
+                <aligny>center</aligny>
+                <font>font13</font>
+                <textcolor>white</textcolor>
+                <focusedcolor>cyan</focusedcolor>
+                <label>Add Folder</label>
+                <texturefocus>menu-grey-focus.png</texturefocus>
+                <texturenofocus>menu-grey.png</texturenofocus>
+                <onup>104</onup>
+                <onleft>4007</onleft>
+            </control>
         </control>
 
         <control type="videowindow">

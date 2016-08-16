@@ -269,6 +269,7 @@
                     <width>180</width>
                     <height>100</height>
                     <textcolor>ffffffff</textcolor>
+                    <shadowcolor>black</shadowcolor>
                     <font>font13</font>
                     <align>center</align>
                     <aligny>center</aligny>

@@ -91,4 +91,4 @@ for addonId in sorted(logos):
 f.close()
 
 dialog = xbmcgui.Dialog()
-dialog.notification("TV Guide Fullscreen","Done: Reload Addon Folders")
+dialog.notification("TV Guide Fullscreen","Done: Reload Addon Folders",sound=False)

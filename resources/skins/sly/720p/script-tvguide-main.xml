@@ -30,7 +30,7 @@
             <posy>0</posy>
             <width>1280</width>
             <height>720</height>
-            <texture>skyq/Backgrounds/full.png</texture>
+            <texture>tvguide-blue-background.png</texture>
             <visible>true</visible>
         </control>
 

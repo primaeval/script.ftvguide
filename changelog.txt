@@ -7,6 +7,12 @@ USAGE NOTES:
 - reload all folders in settings
 - use Spoyser's repo for Super Favourites
 
+version 0.0.65
+- skin tweaks
+
+version 0.0.64
+- skin tweaks
+
 version 0.0.63
 - fixes
 - Dark out until fixed

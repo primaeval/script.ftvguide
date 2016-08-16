@@ -11,18 +11,18 @@
     <animation effect="fade" start="100" end="0" time="250">WindowClose</animation>
     <controls>
         <control type="image">
-            <posx>150</posx>
-            <posy>100</posy>
-            <width>1010</width>
-            <height>510</height>
-            <texture>menu-stream.png</texture>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>1280</width>
+            <height>720</height>
+            <texture>black-back.png</texture>
         </control>
         <control type="image">
-            <posx>150</posx>
-            <posy>100</posy>
-            <width>1010</width>
-            <height>510</height>
-            <texture>menu-stream.png</texture>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>1280</width>
+            <height>720</height>
+            <texture>black-back.png</texture>
         </control>
 
         <control type="label" id="4000">
@@ -38,13 +38,13 @@
         </control>
 
         <control type="fixedlist" id="1000">
-            <posx>175</posx>
+            <posx>0</posx>
             <posy>200</posy>
-            <width>950</width>
+            <width>1280</width>
             <height>180</height>
             <viewtype label="list">list</viewtype>
             <orientation>horizontal</orientation>
-            <focusposition>2</focusposition>
+            <focusposition>3</focusposition>
 
             <itemlayout width="200" height="200">
                 <control type="image">
