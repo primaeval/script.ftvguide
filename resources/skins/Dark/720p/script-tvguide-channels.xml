@@ -198,6 +198,7 @@
             <aligny>center</aligny>
             <font>font13</font>
             <textcolor>white</textcolor>
+			<focusedcolor>cyan</focusedcolor>
             <label>$ADDON[script.tvguide.fullscreen 30502]</label>
             <texturefocus>menu-grey-focus.png</texturefocus>
             <texturenofocus>menu-grey.png</texturenofocus>
@@ -214,6 +215,7 @@
             <aligny>center</aligny>
             <font>font13</font>
             <textcolor>white</textcolor>
+			<focusedcolor>cyan</focusedcolor>
             <label>$ADDON[script.tvguide.fullscreen 30503]</label>
             <texturefocus>menu-grey-focus.png</texturefocus>
             <texturenofocus>menu-grey.png</texturenofocus>

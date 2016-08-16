@@ -138,7 +138,7 @@
                 <width>-10</width>
                 <height>446</height>
                 <visible>Control.IsVisible(4200)</visible>
-                <texture>red.png</texture>
+                <texture>cyan.png</texture>
             </control>
 
             <control type="image">
