@@ -1266,21 +1266,23 @@
             <control type="image" id="6004">
                 <description>Program channel logo</description>
                 <posx>170r</posx>
-                <posy>55r</posy>
+                <posy>50r</posy>
                 <width>160</width>
                 <height>45</height>
                 <aspectratio>keep</aspectratio>
+                <colordiffuse>grey</colordiffuse>
             </control>
             <control type="label" id="6005">
                 <description>Program channel text</description>
-                <posx>1100</posx>
-                <posy>155</posy>
-                <width>160</width>
-                <height>45</height>
-                <textcolor>ffffffff</textcolor>
-                <font>font13</font>
-                <align>right</align>
-                <visible>StringCompare(Control.GetLabel(6004),)</visible>
+                <posx>30</posx>
+                <posy>0</posy>
+                <width>850</width>
+                <height>20</height>
+                <textcolor>grey</textcolor>
+                <font>font13_title</font>
+                <align>left</align>
+                <!--<visible>StringCompare(Control.GetLabel(6004),)</visible>-->
+                <visible>true</visible>
             </control>
 
             <control type="image" id="6006">
