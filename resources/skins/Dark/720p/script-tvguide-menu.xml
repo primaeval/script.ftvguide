@@ -517,8 +517,6 @@
             <visible>false</visible>
         </control>
 
-
-
         <control type="button" id="80004">
             <!-- QUIT -->
             <left>285</left>

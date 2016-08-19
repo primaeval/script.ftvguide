@@ -913,15 +913,13 @@
 				<scroll>true</scroll>
             </control>
             <control type="image" id="7024">
-                <description>Main menu channel logo</description>
-                <left>1030</left>
+                <description>Main menu station logo</description>
                 <top>590</top>
+                <left>1030</left>
                 <width>220</width>
-                <height>160</height>
+                <height>120</height>
                 <aspectratio>keep</aspectratio>
-                <fadetime>500</fadetime>
                 <visible>false</visible>
-                <!-- unused in default skin -->
             </control>
             <control type="label" id="7021">
                 <description>Main menu program time</description>
@@ -939,18 +937,18 @@
                 <left>30</left>
                 <top>590</top>
                 <width>990</width>
-                <height>180</height>
+                <height>120</height>
                 <textcolor>white</textcolor>
                 <font>font13</font>
                 <wrapmultiline>true</wrapmultiline>
                 <autoscroll time="3600" delay="6000" repeat="6000">true</autoscroll>
             </control>
             <control type="image" id="7023">
-                <description>Main menu program channel logo</description>
-                <top>575</top>
+                <description>Main menu program image</description>
+                <top>590</top>
                 <left>1030</left>
                 <width>220</width>
-                <height>150</height>
+                <height>120</height>
                 <aspectratio>keep</aspectratio>
 				<visible>true</visible>
             </control>
@@ -1200,7 +1198,7 @@
             </control>
             <control type="label" id="6005">
                 <description>station call sign</description>
-                <left>10</left>
+                <left>100</left>
                 <top>10</top>
                 <width>300</width>
                 <height>50</height>
@@ -1223,6 +1221,15 @@
                 <shadowcolor>black</shadowcolor>
                 <label>$INFO[System.Time]</label>
                 <animation effect="slide" start="0,0" end="-40,0" time="75" condition="Window.IsVisible(Mutebug)">conditional</animation>
+            </control>
+			<control type="image" id="6004">
+                <description>Program channel logo</description>
+                <top>10</top>
+                <left>10</left>
+                <width>80</width>
+                <height>80</height>
+                <aspectratio>keep</aspectratio>
+				<visible>true</visible>
             </control>
 			<control type="label">
 				<description>todays date</description>
@@ -1254,6 +1261,15 @@
                 <width>1240</width>
                 <height>220</height>
                 <texture>black-back.png</texture>
+            </control>
+			<control type="image" id="6004">
+                <description>Program channel logo</description>
+                <top>10</top>
+                <left>10</left>
+                <width>220</width>
+                <height>220</height>
+                <aspectratio>keep</aspectratio>
+				<visible>true</visible>
             </control>
             <control type="label" id="6001">
                 <description>Program title</description>
@@ -1290,21 +1306,12 @@
                 <wrapmultiline>true</wrapmultiline>
                 <autoscroll time="3600" delay="6000" repeat="6000">true</autoscroll>
             </control>
-			<control type="image" id="6004">
-                <description>Program channel logo</description>
-                <top>400</top>
-                <left>1010</left>
-                <width>220</width>
-                <height>160</height>
-                <aspectratio>keep</aspectratio>
-				<visible>true</visible>
-            </control>
 			<control type="image" id="6006">
                 <description>Program image</description>
                 <top>20</top>
                 <left>1010</left>
                 <width>220</width>
-                <height>160</height>
+                <height>120</height>
                 <aspectratio>keep</aspectratio>
                 <visible>true</visible>
             </control>

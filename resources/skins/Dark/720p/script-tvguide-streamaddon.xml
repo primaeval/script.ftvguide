@@ -10,18 +10,12 @@
     <animation effect="fade" start="0" end="100" time="250">WindowOpen</animation>
     <animation effect="fade" start="100" end="0" time="250">WindowClose</animation>
     <controls>
+
         <control type="image">
-            <posx>150</posx>
-            <posy>100</posy>
-            <width>1010</width>
-            <height>510</height>
-            <texture>cyan.png</texture>
-        </control>
-        <control type="image">
-            <posx>150</posx>
-            <posy>100</posy>
-            <width>1010</width>
-            <height>510</height>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>1280</width>
+            <height>720</height>
             <texture>menu-stream.png</texture>
         </control>
 
@@ -38,10 +32,10 @@
         </control>
 
         <control type="fixedlist" id="1000">
-            <posx>175</posx>
+            <posx>160</posx>
             <posy>200</posy>
             <width>950</width>
-            <height>180</height>
+            <height>170</height>
             <viewtype label="list">list</viewtype>
             <orientation>horizontal</orientation>
             <focusposition>2</focusposition>
@@ -51,9 +45,9 @@
                     <posx>0</posx>
                     <posy>0</posy>
                     <width>200</width>
-                    <height>20180</height>
-                    <texture>tvguide-program-grey.png</texture>
-                    <visible>false</visible>
+                    <height>180</height>
+                    <texture>menu-grey.png</texture>
+                    <visible>true</visible>
                 </control>
                 <control type="image">
                     <posx>31</posx>
@@ -63,9 +57,9 @@
                     <info>ListItem.Icon</info>
                 </control>
                 <control type="label">
-                    <posx>0</posx>
-                    <posy>150</posy>
-                    <width>200</width>
+                    <posx>15</posx>
+                    <posy>140</posy>
+                    <width>170</width>
                     <height>40</height>
                     <align>center</align>
                     <font>font13</font>
@@ -76,10 +70,10 @@
             <focusedlayout width="200" height="200">
                 <control type="image">
                     <posx>0</posx>
-                    <posy>0</posy>
+                    <posy>-5</posy>
                     <width>200</width>
                     <height>180</height>
-                    <texture>tvguide-program-grey-focus.png</texture>
+                    <texture>menu-grey-focus.png</texture>
                     <visible>Control.HasFocus(1000)</visible>
                 </control>
                 <control type="image">
@@ -90,15 +84,16 @@
                     <info>ListItem.Icon</info>
                 </control>
                 <control type="label">
-                    <posx>0</posx>
-                    <posy>150</posy>
-                    <width>180</width>
+                    <posx>15</posx>
+                    <posy>140</posy>
+                    <width>170</width>
                     <height>40</height>
                     <align>center</align>
                     <font>font13</font>
                     <textcolor>white</textcolor>
                     <info>ListItem.Label</info>
-                </control>
+					<scroll>true</scroll>
+				 </control>
             </focusedlayout>
         </control>
     </controls>
