@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog">
+    <allowoverlay>no</allowoverlay>
+    <defaultcontrol always="true">6000</defaultcontrol>
+    <coordinates>
+        <system>1</system>
+        <left>0</left>
+        <top>0</top>
+    </coordinates>
+    <controls>
+        <control type="label" id="6001">
+            <description>visibility marker for selection box</description>
+        </control>
+
+
+        <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>1280</width>
+            <height>720</height>
+            <texture>menu-stream.png</texture>
+        </control>
+
+        <control type="group">
+            <left>200</left>
+            <top>435</top>
+            <width>560</width>
+            <height>38</height>
+            <visible>!Control.IsVisible(6001)</visible>
+            <animation type="Visible">
+                <effect type="slide" start="450,0" end="0,0" time="500" />
+            </animation>
+            <animation type="Hidden">
+                <effect type="slide" start="0,0" end="450,0" time="500" />
+            </animation>
+
+            <control type="image">
+                <left>0</left>
+                <top>20</top>
+                <width>400</width>
+                <height>40</height>
+                <texture>tvguide-glasspane.png</texture>
+            </control>
+            <control type="image">
+                <left>0</left>
+                <top>20</top>
+                <width>400</width>
+                <height>40</height>
+                <texture>tvguide-glasspane.png</texture>
+            </control>
+
+            <control type="image">
+                <left>12</left>
+                <top>20</top>
+                <width>16</width>
+                <height>40</height>
+                <texture>tvguide-channel-updownarrow.png</texture>
+            </control>
+            <control type="image">
+                <left>40</left>
+                <top>20</top>
+                <width>460</width>
+                <height>38</height>
+            </control>
+            <control type="button" id="6002">
+				<description>channel selected to move</description>
+                <left>36</left>
+                <top>20</top>
+                <width>360</width>
+                <height>38</height>
+                <aligny>center</aligny>
+                <font>font13</font>
+                <textcolor>white</textcolor>
+                <label>text</label>
+                <texturefocus>menu-grey-focus.png</texturefocus>
+                <texturenofocus>menu-grey.png</texturenofocus>
+            </control>
+            <control type="label">
+                <left>36</left>
+                <top>70</top>
+                <width>410</width>
+                <height>60</height>
+                <font>font13</font>
+                <textcolor>white</textcolor>
+				<visible>false</visible>
+                <label>$ADDON[script.tvguide.fullscreen 30501]</label>
+            </control>
+        </control>
+
+        <control type="label">
+            <left>150</left>
+            <top>110</top>
+            <width>520</width>
+            <height>40</height>
+            <font>font13_title</font>
+            <textcolor>white</textcolor>
+            <label>$ADDON[script.tvguide.fullscreen 30500]</label>
+        </control>
+		<control type="label">
+            <description>Help and Tips</description>
+            <left>150</left>
+            <top>150</top>
+            <width>400</width>
+            <height>400</height>
+            <textcolor>white</textcolor>
+            <font>font13</font>
+			<align>justify</align>
+            <aligny>top</aligny>
+			<wrapmultiline>true</wrapmultiline>
+			<autoscroll time="3600" delay="6000" repeat="6000">true</autoscroll>
+			<label>$ADDON[script.tvguide.fullscreen 30501]</label>
+        </control>
+        <control type="fixedlist" id="6000">
+            <left>600</left>
+            <top>150</top>
+            <width>520</width>
+            <height>350</height>
+            <viewtype label="list">list</viewtype>
+            <orientation>vertical</orientation>
+            <focusposition>7</focusposition>
+            <onright>6003</onright>
+            <itemlayout width="520" height="40">
+                <control type="image">
+                    <left>0</left>
+                    <top>0</top>
+                    <width>520</width>
+                    <height>38</height>
+                    <texture>menu-grey.png</texture>
+                </control>
+                <control type="label">
+                    <left>16</left>
+                    <top>0</top>
+                    <width>450</width>
+                    <height>38</height>
+                    <aligny>center</aligny>
+                    <font>font13</font>
+                    <textcolor>white</textcolor>
+                    <info>ListItem.Label</info>
+                </control>
+                <control type="image">
+                    <left>470</left>
+                    <top>0</top>
+                    <width>40</width>
+                    <height>40</height>
+                    <info>ListItem.Icon</info>
+                </control>
+            </itemlayout>
+            <focusedlayout width="520" height="40">
+                <control type="image">
+                    <left>0</left>
+                    <top>0</top>
+                    <width>520</width>
+                    <height>38</height>
+                    <texture>menu-grey-focus.png</texture>
+                    <visible>Control.HasFocus(6000)</visible>
+                </control>
+                <control type="image">
+                    <left>8</left>
+                    <top>0</top>
+                    <width>12</width>
+                    <height>40</height>
+                    <texture>tvguide-channel-leftarrow.png</texture>
+                </control>
+                <control type="label">
+                    <left>16</left>
+                    <top>0</top>
+                    <width>450</width>
+                    <height>38</height>
+                    <aligny>center</aligny>
+                    <font>font13</font>
+                    <textcolor>white</textcolor>
+                    <label>[B]$INFO[ListItem.Label][/B]</label>
+                </control>
+                <control type="image">
+                    <left>470</left>
+                    <top>0</top>
+                    <width>40</width>
+                    <height>40</height>
+                    <info>ListItem.Icon</info>
+                </control>
+            </focusedlayout>
+        </control>
+
+        <control type="button" id="6003">
+            <left>720</left>
+            <top>550</top>
+            <width>200</width>
+            <height>40</height>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>font13</font>
+            <textcolor>white</textcolor>
+			<focusedcolor>cyan</focusedcolor>
+            <label>$ADDON[script.tvguide.fullscreen 30502]</label>
+            <texturefocus>menu-grey-focus.png</texturefocus>
+            <texturenofocus>menu-grey.png</texturenofocus>
+            <onleft>6000</onleft>
+            <onright>6004</onright>
+            <onup>6000</onup>
+        </control>
+        <control type="button" id="6004">
+            <left>920</left>
+            <top>550</top>
+            <width>200</width>
+            <height>40</height>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>font13</font>
+            <textcolor>white</textcolor>
+			<focusedcolor>cyan</focusedcolor>
+            <label>$ADDON[script.tvguide.fullscreen 30503]</label>
+            <texturefocus>menu-grey-focus.png</texturefocus>
+            <texturenofocus>menu-grey.png</texturenofocus>
+            <onleft>6003</onleft>
+            <onright>6000</onright>
+            <onup>6000</onup>
+        </control>
+
+    </controls>
+</window>

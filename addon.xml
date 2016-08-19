@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.tvguide.fullscreen" name="TV Guide Fullscreen" version="0.0.65" provider-name="primaeval, iainmacleod, im85288">
+<addon id="script.tvguide.fullscreen" name="TV Guide Fullscreen" version="0.0.66" provider-name="primaeval, iainmacleod, im85288">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0"/>
 		<import addon="script.module.simplejson" version="3.3.0"/>
