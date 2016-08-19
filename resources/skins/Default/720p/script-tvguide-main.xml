@@ -1265,8 +1265,8 @@
 
             <control type="image" id="6004">
                 <description>Program channel logo</description>
-                <posx>160r</posx>
-                <posy>45r</posy>
+                <posx>170r</posx>
+                <posy>55r</posy>
                 <width>160</width>
                 <height>45</height>
                 <aspectratio>keep</aspectratio>
