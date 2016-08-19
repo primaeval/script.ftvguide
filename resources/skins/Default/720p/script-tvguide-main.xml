@@ -23,7 +23,7 @@
             <height>1</height>
             <texture>tvguide-program-red-focus.png</texture>
         </control>
-
+        <!--
         <control type="image">
             <description>background</description>
             <posx>0</posx>
@@ -31,7 +31,7 @@
             <width>1280</width>
             <height>720</height>
             <texture>black.png</texture>
-            <visible>true</visible>
+            <visible>false</visible>
         </control>
 
         <control type="image">
@@ -43,7 +43,7 @@
             <texture>black.png</texture>
             <visible>false</visible>
         </control>
-        <!-- Background -->
+         Background -->
         <control type="videowindow">
             <description>video window</description>
             <posx>0</posx>
@@ -1262,37 +1262,27 @@
                 <align>right</align>
                 <aligny>center</aligny>
             </control>
-            <control type="textbox" id="6003">
-                <description>Program description</description>
-                <posx>30</posx>
-                <posy>50</posy>
-                <width>1230</width>
-                <height>149</height>
-                <label>Description</label>
-                <textcolor>ffffffff</textcolor>
-                <font>font13</font>
-                <wrapmultiline>true</wrapmultiline>
 
-                <autoscroll time="3600" delay="6000" repeat="6000">true</autoscroll>
-            </control>
             <control type="image" id="6004">
                 <description>Program channel logo</description>
-                <posx>1100</posx>
-                <posy>155</posy>
+                <posx>170r</posx>
+                <posy>50r</posy>
                 <width>160</width>
                 <height>45</height>
                 <aspectratio>keep</aspectratio>
+                <colordiffuse>grey</colordiffuse>
             </control>
             <control type="label" id="6005">
                 <description>Program channel text</description>
-                <posx>1100</posx>
-                <posy>155</posy>
-                <width>160</width>
-                <height>45</height>
-                <textcolor>ffffffff</textcolor>
-                <font>font13</font>
-                <align>right</align>
-                <visible>StringCompare(Control.GetLabel(6004),)</visible>
+                <posx>30</posx>
+                <posy>0</posy>
+                <width>850</width>
+                <height>20</height>
+                <textcolor>grey</textcolor>
+                <font>font13_title</font>
+                <align>left</align>
+                <!--<visible>StringCompare(Control.GetLabel(6004),)</visible>-->
+                <visible>true</visible>
             </control>
 
             <control type="image" id="6006">
@@ -1306,19 +1296,7 @@
                 <visible>false</visible>
             </control>
 
-            <control type="textbox" id="6007">
-                <description>Next Program description</description>
-                <posx>1045</posx>
-                <posy>50</posy>
-                <width>220</width>
-                <height>124</height>
-                <label>Description</label>
-                <textcolor>ffcccccc</textcolor>
-                <font>font12</font>
-                <wrapmultiline>true</wrapmultiline>
-                <autoscroll time="3600" delay="6000" repeat="6000">true</autoscroll>
-                <visible>false</visible>
-            </control>
+
 
             <control type="label" id="6008">
                 <description>Next Program title</description>
@@ -1346,7 +1324,32 @@
                 <aligny>top</aligny>
                 <visible>false</visible>
             </control>
+            <control type="textbox" id="6003">
+                <description>Program description</description>
+                <posx>30</posx>
+                <posy>50</posy>
+                <width>1230</width>
+                <height>149</height>
+                <label>Description</label>
+                <textcolor>ffffffff</textcolor>
+                <font>font13</font>
+                <wrapmultiline>true</wrapmultiline>
 
+                <autoscroll time="3600" delay="6000" repeat="6000">true</autoscroll>
+            </control>
+            <control type="textbox" id="6007">
+                <description>Next Program description</description>
+                <posx>1045</posx>
+                <posy>50</posy>
+                <width>220</width>
+                <height>124</height>
+                <label>Description</label>
+                <textcolor>ffcccccc</textcolor>
+                <font>font12</font>
+                <wrapmultiline>true</wrapmultiline>
+                <autoscroll time="3600" delay="6000" repeat="6000">true</autoscroll>
+                <visible>false</visible>
+            </control>
         </control>
 
     </controls>
