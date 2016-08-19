@@ -35,13 +35,13 @@
         </control>
 
         <control type="image">
-            <description>blackout on play</description>
+            <description>blackout on play (ANDROID ERROR: HIDES VIDEO WINDOW!!!)</description>
             <posx>0</posx>
             <posy>0</posy>
             <width>1280</width>
             <height>720</height>
             <texture>black.png</texture>
-            <visible>Control.IsVisible(5000)</visible>
+            <visible>false</visible>
         </control>
         <!-- Background -->
         <control type="videowindow">
