@@ -467,7 +467,7 @@ class TVGuide(xbmcgui.WindowXML):
             self._hideLastPlayed()
 
 
-
+    # epg mode
     def onActionEPGMode(self, action):
         if action.getId() in [ACTION_PARENT_DIR, KEY_NAV_BACK]:
             self.close()
