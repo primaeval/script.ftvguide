@@ -639,6 +639,10 @@ class TVGuide(xbmcgui.WindowXML):
         elif action.getId() == ACTION_SELECT_ITEM:
             self._hideQuickEpg()
             self.playChannel(self.osdChannel, self.osdProgram)
+        elif action.getId() in [KEY_CONTEXT_MENU] and controlInFocus is not None:
+            program = self._getQuickProgramFromControl(controlInFocus)
+            if program is not None:
+                self._showContextMenu(program)
         elif action.getId() in [REMOTE_1]:
             program = self._getQuickProgramFromControl(controlInFocus)
             if program is not None:
