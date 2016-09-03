@@ -2495,9 +2495,9 @@
 
             <control type="label" id="17021">
                 <description>Program time</description>
-                <posx>1262</posx>
+                <posx>1162</posx>
                 <posy>-160</posy>
-                <width>200</width>
+                <width>300</width>
                 <height>30</height>
                 <textcolor>cc000000</textcolor>
                 <font>font13</font>

@@ -15,14 +15,7 @@
             <posy>0</posy>
             <width>1280</width>
             <height>720</height>
-            <texture>black-back.png</texture>
-        </control>
-        <control type="image">
-            <posx>0</posx>
-            <posy>0</posy>
-            <width>1280</width>
-            <height>720</height>
-            <texture>black-back.png</texture>
+            <texture>black.png</texture>
         </control>
         <control type="image">
             <description>background</description>
@@ -60,9 +53,8 @@
                     <posx>0</posx>
                     <posy>0</posy>
                     <width>200</width>
-                    <height>20180</height>
-                    <texture>tvguide-program-grey.png</texture>
-                    <visible>false</visible>
+                    <height>180</height>
+                    <texture>tvg-button-nofocus.png</texture>
                 </control>
                 <control type="image">
                     <posx>31</posx>
@@ -78,7 +70,7 @@
                     <height>40</height>
                     <align>center</align>
                     <font>font12</font>
-                    <textcolor>ffffffff</textcolor>
+                    <textcolor>white</textcolor>
                     <info>ListItem.Label</info>
                 </control>
             </itemlayout>
@@ -88,7 +80,7 @@
                     <posy>0</posy>
                     <width>200</width>
                     <height>180</height>
-                    <texture>tvguide-program-grey-focus.png</texture>
+                    <texture>tvg-button-focus.png</texture>
                     <visible>Control.HasFocus(1000)</visible>
                 </control>
                 <control type="image">
@@ -105,7 +97,7 @@
                     <height>40</height>
                     <align>center</align>
                     <font>font12</font>
-                    <textcolor>ffffffff</textcolor>
+                    <textcolor>black</textcolor>
                     <info>ListItem.Label</info>
                 </control>
             </focusedlayout>
