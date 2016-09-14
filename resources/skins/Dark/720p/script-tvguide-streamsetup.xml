@@ -20,7 +20,7 @@
             <top>0</top>
             <width>1280</width>
             <height>720</height>
-            <texture fallback="special://skin/extras/backgrounds/SKINDEFAULT.jpg">$VAR[GlobalFanartVar]</texture>
+            <texture>tvg-background.png</texture>
             <visible>true</visible>
         </control>
         <!-- Header Background-->

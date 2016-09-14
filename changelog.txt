@@ -7,6 +7,12 @@ USAGE NOTES:
 - reload all folders in settings
 - use Spoyser's repo for Super Favourites
 
+version 0.0.115
+- fix
+
+version 0.0.114
+- fix
+
 version 0.0.113
 - AutoPlayWith function (see readme.txt in addons\script.tvguide.fullscreen\resources\playwith)
 

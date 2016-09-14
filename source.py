@@ -781,20 +781,24 @@ class Database(object):
         #once
         #TODO always, notifications,autoplays
         c.execute(
-            'SELECT p.*, (SELECT 1 FROM notifications n WHERE n.channel=p.channel AND n.program_title=p.title AND n.source=p.source) AS notification_scheduled,' +
+            'SELECT p.*, ' +
+            '(SELECT 1 FROM notifications n WHERE n.channel=p.channel AND n.program_title=p.title AND n.source=p.source AND n.type=0 AND n.start_date=p.start_date) AS notification_scheduled_once, '+
+            '(SELECT 1 FROM notifications n WHERE n.channel=p.channel AND n.program_title=p.title AND n.source=p.source AND n.type=1 ) AS notification_scheduled_always, '+
             '(SELECT 1 FROM autoplays a WHERE a.channel=p.channel AND a.program_title=p.title AND a.source=p.source AND a.type=0 AND a.start_date=p.start_date) AS autoplay_scheduled_once, '+
             '(SELECT 1 FROM autoplays a WHERE a.channel=p.channel AND a.program_title=p.title AND a.source=p.source AND a.type=1 ) AS autoplay_scheduled_always, '+
             '(SELECT 1 FROM autoplaywiths w WHERE w.channel=p.channel AND w.program_title=p.title AND w.source=p.source AND w.type=0 AND w.start_date=p.start_date) AS autoplaywith_scheduled_once, '+
             '(SELECT 1 FROM autoplaywiths w WHERE w.channel=p.channel AND w.program_title=p.title AND w.source=p.source AND w.type=1 ) AS autoplaywith_scheduled_always '+
             'FROM programs p WHERE p.channel IN (\'' + ('\',\''.join(channelMap.keys())) + '\') AND p.source=? AND p.end_date > ? AND p.start_date < ?',
             [self.source.KEY, startTime, endTime])
+
         for row in c:
+            notification_scheduled = row['notification_scheduled_once'] or row['notification_scheduled_always']
             autoplay_scheduled = row['autoplay_scheduled_once'] or row['autoplay_scheduled_always']
             autoplaywith_scheduled = row['autoplaywith_scheduled_once'] or row['autoplaywith_scheduled_always']
             program = Program(channelMap[row['channel']], title=row['title'], startDate=row['start_date'], endDate=row['end_date'], description=row['description'],
                               imageLarge=row['image_large'], imageSmall=row['image_small'], season=row['season'], episode=row['episode'],
                               is_movie=row['is_movie'], language=row['language'],
-                              notificationScheduled=row['notification_scheduled'], autoplayScheduled=autoplay_scheduled, autoplaywithScheduled=autoplaywith_scheduled)
+                              notificationScheduled=notification_scheduled, autoplayScheduled=autoplay_scheduled, autoplaywithScheduled=autoplaywith_scheduled)
             programList.append(program)
         return programList
 
