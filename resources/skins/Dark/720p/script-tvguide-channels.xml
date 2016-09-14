@@ -11,24 +11,13 @@
         <control type="label" id="6001">
             <description>visibility marker for selection box</description>
         </control>
-		<!-- Background -->
+
         <control type="image">
-            <description>Background</description>
             <left>0</left>
             <top>0</top>
             <width>1280</width>
             <height>720</height>
-			<aspectratio>scale</aspectratio>
-            <texture fallback="charcoal.jpg">$VAR[GlobalFanartVar]</texture>
-            <visible>true</visible>
-        </control>
-		<!-- Channel Mount -->
-        <control type="image">
-            <left>135</left>
-            <top>105</top>
-            <width>1000</width>
-            <height>500</height>
-            <texture>black-back.png</texture>
+            <texture fallback="special://skin/extras/backgrounds/SKINDEFAULT.jpg">$VAR[GlobalFanartVar]</texture>
         </control>
 
         <control type="group">

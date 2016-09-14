@@ -11,79 +11,56 @@
     <controls>
 
         <control type="image">
-            <description>Background</description>
-            <left>0</left>
-            <top>0</top>
+            <description>background</description>
+            <posx>0</posx>
+            <posy>0</posy>
             <width>1280</width>
             <height>720</height>
-			<aspectratio>scale</aspectratio>
-            <texture fallback="charcoal.jpg">$VAR[GlobalFanartVar]</texture>
-            <visible>true</visible>
-        </control>
-		<control type="image">
-            <description>Mount</description>
-            <left>0</left>
-            <top>0</top>
-            <width>1280</width>
-            <height>720</height>
-			<aspectratio>scale</aspectratio>
-            <texture>black-back.png</texture>
+            <texture>tvg-background.png</texture>
             <visible>true</visible>
         </control>
 
-        <!-- Header - Date and time display -->
-		<control type="group">
-			<left>0</left>
-			<top>0</top>
-			<width>1280</width>
-			<height>60</height>
-			<visible>true</visible>
-			<control type="label">
-				<description>Displays todays date</description>
-				<left>1000</left>
-				<top>25</top>
-				<width>270</width>
-				<height>20</height>
-				<textcolor>white</textcolor>
-				<font>font12</font>
-				<align>right</align>
-				<label>$INFO[System.Date]</label>
-				<visible>true</visible>
-			</control>
-			<control type="label">
-				<description>Display current time</description>
-				<left>1030</left>
-				<top>5</top>
-				<width>240</width>
-				<height>20</height>
-				<align>right</align>
-				<font>font13_title</font>
-				<textcolor>white</textcolor>
-				<label>$INFO[System.Time]</label>
-			</control>
-		</control>
-		<control type="label">
-			<description>Display current temperature</description>
-			<left>1095</left>
-			<top>5</top>
-			<width>60</width>
-			<height>20</height>
-			<align>right</align>
-			<font>font13_title</font>
-			<textcolor>white</textcolor>
-			<label>$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
-            <visible>Skin.HasSetting(show_weatherinfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na) + String.Contains(Weather.Conditions,/)]</visible>
-		</control>
-		<control type="image">
-			<description>Display current weather icon</description>
-            <left>1128</left>
-			<top>4</top>
-			<width>60</width>
-			<height>35</height>
-            <fadetime>300</fadetime>
-            <aspectratio align="right">keep</aspectratio>
-            <texture colordiffuse="button_focus">weather/small/$INFO[Weather.FanartCode].png</texture>
-            <visible>Skin.HasSetting(show_weatherinfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na) + String.Contains(Weather.Conditions,/)]</visible>
+        <control type="label" id="1001">
+            <description>Title</description>
+            <left>0</left>
+            <top>20</top>
+            <width>950</width>
+            <height>20</height>
+            <font>font13_title</font>
+            <textcolor>orange</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <align>right</align>
+            <aligny>center</aligny>
+            <label>Title</label>
+        </control>
+
+        <control type="label">
+            <description>Displays todays date</description>
+            <posx>5r</posx>
+            <posy>0</posy>
+            <width>280</width>
+            <height>20</height>
+            <textcolor>bbffffff</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <font>font13</font>
+            <align>right</align>
+            <aligny>center</aligny>
+            <visible>true</visible>
+            <label>$INFO[System.Date(DDD)], $INFO[System.Date(dd)] $INFO[System.Date(MMM)]</label>
+        </control>
+
+        <control type="label">
+            <description>time label</description>
+            <right>5</right>
+            <top>20</top>
+            <width>200</width>
+            <height>30</height>
+            <align>right</align>
+            <aligny>center</aligny>
+            <font>font28_title</font>
+            <textcolor>white</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <label>$INFO[System.Time(hh:mm)]</label>
         </control>
 
         <control type="group">
@@ -92,7 +69,7 @@
             <control type="group">
                 <left>0</left>
                 <top>0</top>
-                <control type="label" id="1001">
+                <control type="label">
                     <description>Channel label</description>
                     <left>100</left>
                     <top>20</top>
@@ -100,6 +77,7 @@
                     <height>20</height>
                     <font>font13_title</font>
                     <textcolor>white</textcolor>
+                    <shadowcolor>black</shadowcolor>
                     <align>left</align>
                     <aligny>center</aligny>
                     <label>19148</label>
@@ -112,7 +90,8 @@
                     <height>20</height>
                     <font>font13_title</font>
                     <textcolor>white</textcolor>
-                            <align>left</align>
+                    <shadowcolor>black</shadowcolor>
+                    <align>left</align>
                     <aligny>center</aligny>
                     <label>Start</label>
                 </control>
@@ -124,7 +103,8 @@
                     <height>20</height>
                     <font>font13_title</font>
                     <textcolor>white</textcolor>
-                            <align>right</align>
+                    <shadowcolor>black</shadowcolor>
+                    <align>right</align>
                     <aligny>center</aligny>
                     <label>Length</label>
                 </control>
@@ -136,7 +116,8 @@
                     <height>20</height>
                     <font>font13_title</font>
                     <textcolor>white</textcolor>
-                            <align>left</align>
+                    <shadowcolor>black</shadowcolor>
+                    <align>left</align>
                     <aligny>center</aligny>
                     <label>369</label>
                 </control>

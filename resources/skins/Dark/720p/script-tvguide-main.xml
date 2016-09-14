@@ -7,111 +7,125 @@
         <top>0</top>
     </coordinates>
     <controls>
-		<constant name="color">aaff1111</constant>
-		<param name="red">aaff1111</param>
         <control type="image">
             <description>workaround for texture not being loaded</description>
-            <left>-10000</left>
-            <top>-10000</top>
+            <posx>-10000</posx>
+            <posy>-10000</posy>
             <width>1</width>
             <height>1</height>
             <texture>tvg-program-focus.png</texture>
         </control>
         <control type="image">
             <description>workaround for texture not being loaded</description>
-            <left>-10000</left>
-            <top>-10000</top>
+            <posx>-10000</posx>
+            <posy>-10000</posy>
             <width>1</width>
             <height>1</height>
             <texture>tvg-program-nofocus.png</texture>
         </control>
         <control type="image">
             <description>workaround for texture not being loaded</description>
-            <left>-10000</left>
-            <top>-10000</top>
+            <posx>-10000</posx>
+            <posy>-10000</posy>
             <width>1</width>
             <height>1</height>
             <texture>tvg-playing-focus.png</texture>
         </control>
         <control type="image">
             <description>workaround for texture not being loaded</description>
-            <left>-10000</left>
-            <top>-10000</top>
+            <posx>-10000</posx>
+            <posy>-10000</posy>
             <width>1</width>
             <height>1</height>
             <texture>tvg-playing-nofocus.png</texture>
         </control>
         <control type="image">
             <description>workaround for texture not being loaded</description>
-            <left>-10000</left>
-            <top>-10000</top>
+            <posx>-10000</posx>
+            <posy>-10000</posy>
             <width>1</width>
             <height>1</height>
             <texture>tvg-remind-focus.png</texture>
         </control>
         <control type="image">
             <description>workaround for texture not being loaded</description>
-            <left>-10000</left>
-            <top>-10000</top>
+            <posx>-10000</posx>
+            <posy>-10000</posy>
             <width>1</width>
             <height>1</height>
             <texture>tvg-remind-nofocus.png</texture>
         </control>
         <control type="image">
             <description>workaround for texture not being loaded</description>
-            <left>-10000</left>
-            <top>-10000</top>
+            <posx>-10000</posx>
+            <posy>-10000</posy>
             <width>1</width>
             <height>1</height>
             <texture>tvg-autoplay-focus.png</texture>
         </control>
         <control type="image">
             <description>workaround for texture not being loaded</description>
-            <left>-10000</left>
-            <top>-10000</top>
+            <posx>-10000</posx>
+            <posy>-10000</posy>
             <width>1</width>
             <height>1</height>
             <texture>tvg-autoplay-nofocus.png</texture>
         </control>
         <control type="image">
             <description>workaround for texture not being loaded</description>
-            <left>-10000</left>
-            <top>-10000</top>
+            <posx>-10000</posx>
+            <posy>-10000</posy>
+            <width>1</width>
+            <height>1</height>
+            <texture>tvg-autoplaywith-focus.png</texture>
+        </control>
+        <control type="image">
+            <description>workaround for texture not being loaded</description>
+            <posx>-10000</posx>
+            <posy>-10000</posy>
+            <width>1</width>
+            <height>1</height>
+            <texture>tvg-autoplaywith-nofocus.png</texture>
+        </control>
+        <control type="image">
+            <description>workaround for texture not being loaded</description>
+            <posx>-10000</posx>
+            <posy>-10000</posy>
+            <width>1</width>
+            <height>1</height>
+            <texture>background-cover.png</texture>
+        </control>
+        <control type="image">
+            <description>workaround for texture not being loaded</description>
+            <posx>-10000</posx>
+            <posy>-10000</posy>
+            <width>1</width>
+            <height>1</height>
+            <texture>background-cover2.png</texture>
+        </control>
+        <control type="image">
+            <description>workaround for texture not being loaded</description>
+            <posx>-10000</posx>
+            <posy>-10000</posy>
+            <width>1</width>
+            <height>1</height>
+            <texture>tvg-programs-back.png</texture>
+        </control>
+        <control type="image">
+            <description>workaround for texture not being loaded</description>
+            <posx>-10000</posx>
+            <posy>-10000</posy>
             <width>1</width>
             <height>1</height>
             <texture>tvguide-program-red.png</texture>
         </control>
         <control type="image">
             <description>workaround for texture not being loaded</description>
-            <left>-10000</left>
-            <top>-10000</top>
-            <width>1</width>
-            <height>1</height>
-            <texture>tvguide-program-red.png</texture>
-        </control>
-        <control type="image">
-            <description>workaround for texture not being loaded</description>
-            <left>-10000</left>
-            <top>-10000</top>
+            <posx>-10000</posx>
+            <posy>-10000</posy>
             <width>1</width>
             <height>1</height>
             <texture>tvguide-program-red-focus.png</texture>
-        </control>
-        <control type="image">
-            <description>workaround for texture not being loaded</description>
-            <left>-10000</left>
-            <top>-10000</top>
-            <width>1</width>
-            <height>1</height>
-            <texture>tvguide-program-grey.png</texture>
-        </control>
-        <control type="image">
-            <description>workaround for texture not being loaded</description>
-            <left>-10000</left>
-            <top>-10000</top>
-            <width>1</width>
-            <height>1</height>
-            <texture>tvguide-program-grey-focus.png</texture>
         </control>
 		<control type="image">
             <description>workaround for texture not being loaded</description>
@@ -137,8 +151,7 @@
             <top>0</top>
             <width>1280</width>
             <height>720</height>
-			<aspectratio>scale</aspectratio>
-            <texture fallback="charcoal.jpg">$VAR[GlobalFanartVar]</texture>
+            <texture>highlight.png</texture>
             <visible>true</visible>
         </control>
 
@@ -160,6 +173,9 @@
             <top>0</top>
             <width>1280</width>
             <height>720</height>
+            <!--<animation type="Conditional" condition="!Control.IsVisible(5000)">
+                <effect type="zoom" end="25" center="1250,690" time="500" />
+            </animation>-->
             <visible>true</visible>
         </control>
 
@@ -264,6 +280,7 @@
                     <width>180</width>
                     <height>60</height>
                     <textcolor>white</textcolor>
+                    <shadowcolor>black</shadowcolor>
                     <font>font13_title</font>
                     <align>center</align>
 					<aligny>center</aligny>
@@ -276,7 +293,8 @@
 					<width>270</width>
 					<height>20</height>
 					<textcolor>white</textcolor>
-						<font>font12</font>
+					<shadowcolor>black</shadowcolor>
+					<font>font12</font>
 					<align>right</align>
 					<visible>true</visible>
 					<label>$INFO[System.Date]</label>
@@ -288,7 +306,8 @@
 					<width>270</width>
 					<height>20</height>
 					<textcolor>white</textcolor>
-						<font>font12</font>
+					<shadowcolor>black</shadowcolor>
+					<font>font12</font>
 					<align>right</align>
 					<visible>false</visible>
                 </control>
@@ -301,7 +320,8 @@
 					<align>right</align>
 					<font>font13_title</font>
 					<textcolor>white</textcolor>
-						<label>$INFO[System.Time]</label>
+					<shadowcolor>black</shadowcolor>
+					<label>$INFO[System.Time]</label>
 				</control>
 				<control type="label">
 					<description>Display current temperature</description>
@@ -312,7 +332,8 @@
 					<align>right</align>
 					<font>font13_title</font>
 					<textcolor>white</textcolor>
-						<label>$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
+					<shadowcolor>black</shadowcolor>
+					<label>$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
 					<visible>Skin.HasSetting(show_weatherinfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na) + String.Contains(Weather.Conditions,/)]</visible>
 				</control>
 				<control type="image">
@@ -334,7 +355,8 @@
                     <width>270</width>
                     <height>20</height>
                     <textcolor>white</textcolor>
-					        <font>font13_title</font>
+					<shadowcolor>black</shadowcolor>
+                    <font>font13_title</font>
                 </control>
                 <control type="label" id="4002">
                     <description>2nd half hour label</description>
@@ -343,7 +365,8 @@
                     <width>270</width>
                     <height>20</height>
                     <textcolor>white</textcolor>
-					        <font>font13_title</font>
+					<shadowcolor>black</shadowcolor>
+                    <font>font13_title</font>
 					<visible>false</visible>
                 </control>
                 <control type="label" id="4003">
@@ -353,7 +376,8 @@
                     <width>270</width>
                     <height>20</height>
                     <textcolor>white</textcolor>
-					        <font>font13_title</font>
+					<shadowcolor>black</shadowcolor>
+                    <font>font13_title</font>
                 </control>
                 <control type="label" id="4004">
                     <description>4th half hour column</description>
@@ -362,7 +386,8 @@
                     <width>270</width>
                     <height>20</height>
                     <textcolor>white</textcolor>
-					        <font>font13_title</font>
+					<shadowcolor>black</shadowcolor>
+                    <font>font13_title</font>
 					<visible>false</visible>
                 </control>
             </control>
@@ -576,6 +601,7 @@
                     <width>176</width>
                     <height>40</height>
                     <textcolor>white</textcolor>
+                    <shadowcolor>-</shadowcolor>
                     <font>font13_title</font>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -588,6 +614,7 @@
                     <width>176</width>
                     <height>40</height>
                     <textcolor>white</textcolor>
+                    <shadowcolor>-</shadowcolor>
                     <font>font13_title</font>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -600,6 +627,7 @@
                     <width>176</width>
                     <height>40</height>
                     <textcolor>white</textcolor>
+                    <shadowcolor>-</shadowcolor>
                     <font>font13_title</font>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -612,6 +640,7 @@
                     <width>176</width>
                     <height>40</height>
                     <textcolor>white</textcolor>
+                    <shadowcolor>-</shadowcolor>
                     <font>font13_title</font>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -624,6 +653,7 @@
                     <width>176</width>
                     <height>40</height>
                     <textcolor>white</textcolor>
+                    <shadowcolor>-</shadowcolor>
                     <font>font13_title</font>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -636,6 +666,7 @@
                     <width>176</width>
                     <height>40</height>
                     <textcolor>white</textcolor>
+                    <shadowcolor>-</shadowcolor>
                     <font>font13_title</font>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -648,6 +679,7 @@
                     <width>176</width>
                     <height>40</height>
                     <textcolor>white</textcolor>
+                    <shadowcolor>-</shadowcolor>
                     <font>font13_title</font>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -660,6 +692,7 @@
                     <width>176</width>
                     <height>40</height>
                     <textcolor>white</textcolor>
+                    <shadowcolor>-</shadowcolor>
                     <font>font13_title</font>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -672,6 +705,7 @@
                     <width>176</width>
                     <height>40</height>
                     <textcolor>white</textcolor>
+                    <shadowcolor>-</shadowcolor>
                     <font>font13_title</font>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -684,6 +718,7 @@
                     <width>176</width>
                     <height>40</height>
                     <textcolor>white</textcolor>
+                    <shadowcolor>-</shadowcolor>
                     <font>font13_title</font>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -696,6 +731,7 @@
                     <width>176</width>
                     <height>40</height>
                     <textcolor>white</textcolor>
+                    <shadowcolor>-</shadowcolor>
                     <font>font13_title</font>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -708,6 +744,7 @@
                     <width>176</width>
                     <height>40</height>
                     <textcolor>white</textcolor>
+                    <shadowcolor>-</shadowcolor>
                     <font>font13_title</font>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -720,6 +757,7 @@
                     <width>176</width>
                     <height>40</height>
                     <textcolor>white</textcolor>
+                    <shadowcolor>-</shadowcolor>
                     <font>font13_title</font>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -732,6 +770,7 @@
                     <width>176</width>
                     <height>40</height>
                     <textcolor>white</textcolor>
+                    <shadowcolor>-</shadowcolor>
                     <font>font13_title</font>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -744,6 +783,7 @@
                     <width>176</width>
                     <height>40</height>
                     <textcolor>white</textcolor>
+                    <shadowcolor>-</shadowcolor>
                     <font>font13_title</font>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -756,6 +796,7 @@
                     <width>176</width>
                     <height>40</height>
                     <textcolor>white</textcolor>
+                    <shadowcolor>-</shadowcolor>
                     <font>font13_title</font>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -947,7 +988,8 @@
                 <width>200</width>
                 <height>50</height>
                 <textcolor>white</textcolor>
-				    <font>font13</font>
+				<shadowcolor>black</shadowcolor>
+                <font>font13</font>
                 <align>left</align>
                 <visible>false</visible>
                 <scroll>true</scroll>
@@ -968,7 +1010,8 @@
                 <width>700</width>
                 <height>20</height>
                 <textcolor>white</textcolor>
-                    <font>font13</font>
+                <shadowcolor>black</shadowcolor>
+                <font>font13</font>
                 <align>left</align>
                 <visible>true</visible>
 				<scroll>true</scroll>
@@ -999,7 +1042,8 @@
                 <width>240</width>
                 <height>20</height>
                 <textcolor>white</textcolor>
-				    <font>font13</font>
+				<shadowcolor>black</shadowcolor>
+                <font>font13</font>
 				<align>right</align>
 			</control>
             <control type="textbox" id="7022">
@@ -1010,7 +1054,6 @@
                 <height>100</height>
                 <textcolor>white</textcolor>
                 <font>font13</font>
-				<align>justify</align>
 				<wrapmultiline>true</wrapmultiline>
                 <autoscroll time="3600" delay="6000" repeat="6000">true</autoscroll>
             </control>
@@ -1254,8 +1297,7 @@
             <width>1280</width>
             <height>100</height>
             <visible>!Control.IsVisible(6000)</visible>
-			<animation effect="slide" start="0,60">VisibleChange</animation>
-            <animation effect="slide" end="0,-60" time="1000">VisibleChange</animation>
+            <animation effect="slide" start="0,-60" time="500">VisibleChange</animation>
             <control type="image">
 				<description>OSD header background - Now playing</description>
                 <top>0</top>
@@ -1271,7 +1313,8 @@
                 <width>300</width>
                 <height>60</height>
                 <textcolor>white</textcolor>
-				    <font>font13</font>
+				<shadowcolor>black</shadowcolor>
+                <font>font13</font>
                 <align>left</align>
 				<aligny>center</aligny>
                 <visible>StringCompare(Control.GetLabel(6004),)</visible>
@@ -1285,6 +1328,7 @@
 				<align>right</align>
                 <font>font13_title</font>
                 <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
                 <label>$INFO[System.Time]</label>
                 <animation effect="slide" start="0,0" end="-40,0" time="75" condition="Window.IsVisible(Mutebug)">conditional</animation>
             </control>
@@ -1315,7 +1359,8 @@
 				<width>270</width>
                 <height>20</height>
                 <textcolor>white</textcolor>
-                    <font>font12</font>
+                <shadowcolor>black</shadowcolor>
+                <font>font12</font>
                 <align>right</align>
                 <visible>true</visible>
                 <label>$INFO[System.Date]</label>
@@ -1329,6 +1374,7 @@
 				<align>right</align>
 				<font>font13_title</font>
 				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
 				<label>$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
                 <visible>Skin.HasSetting(show_weatherinfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na) + String.Contains(Weather.Conditions,/)]</visible>
 			</control>
@@ -1369,7 +1415,8 @@
                 <height>20</height>
                 <label>[B]Title[/B]</label>
                 <textcolor>white</textcolor>
-				    <font>font13</font>
+				<shadowcolor>black</shadowcolor>
+                <font>font13</font>
             </control>
             <control type="label" id="6002">
                 <description>Programme time - Now playing</description>
@@ -1379,7 +1426,8 @@
                 <height>20</height>
                 <label>[B]18:00 - 20:00[/B]</label>
                 <textcolor>white</textcolor>
-				    <font>font13</font>
+				<shadowcolor>black</shadowcolor>
+                <font>font13</font>
 				<align>right</align>
             </control>
             <control type="textbox" id="6003">
@@ -1391,7 +1439,6 @@
                 <label>Description</label>
                 <textcolor>white</textcolor>
                 <font>font13</font>
-				<align>justify</align>
                 <wrapmultiline>true</wrapmultiline>
                 <autoscroll time="3600" delay="6000" repeat="6000">true</autoscroll>
             </control>
@@ -1435,7 +1482,6 @@
                 <label>Description</label>
                 <textcolor>white</textcolor>
                 <font>font12</font>
-				<align>justify</align>
                 <wrapmultiline>true</wrapmultiline>
                 <autoscroll time="3600" delay="6000" repeat="6000">true</autoscroll>
                 <visible>false</visible>
@@ -1489,7 +1535,7 @@
             <width>1280</width>
             <height>100</height>
             <visible>!Control.IsVisible(8000)</visible>
-            <animation effect="slide" delay="4000" end="0,-60" time="500">VisibleChange</animation>
+            <animation effect="slide" start="0,-60" time="500">VisibleChange</animation>
             <control type="image">
                 <description>OSD header background - Last played</description>
 				<top>0</top>
@@ -1505,7 +1551,8 @@
                 <width>300</width>
                 <height>40</height>
                 <textcolor>white</textcolor>
-				    <font>font13</font>
+				<shadowcolor>black</shadowcolor>
+                <font>font13</font>
                 <align>left</align>
 				<aligny>center</aligny>
                 <visible>StringCompare(Control.GetLabel(8004),)</visible>
@@ -1519,6 +1566,7 @@
 				<align>right</align>
                 <font>font13_title</font>
                 <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
                 <label>$INFO[System.Time]</label>
                 <animation effect="slide" start="0,0" end="-40,0" time="75" condition="Window.IsVisible(Mutebug)">conditional</animation>
             </control>
@@ -1549,7 +1597,8 @@
 				<width>270</width>
                 <height>20</height>
                 <textcolor>white</textcolor>
-                    <font>font12</font>
+                <shadowcolor>black</shadowcolor>
+                <font>font12</font>
                 <align>right</align>
                 <visible>true</visible>
                 <label>$INFO[System.Date]</label>
@@ -1580,7 +1629,8 @@
                 <height>20</height>
                 <label>[B]Title[/B]</label>
                 <textcolor>white</textcolor>
-				    <font>font13</font>
+				<shadowcolor>black</shadowcolor>
+                <font>font13</font>
             </control>
             <control type="label" id="8002">
                 <description>Programme time - Last played</description>
@@ -1590,7 +1640,8 @@
                 <height>20</height>
                 <label>[B]18:00 - 20:00[/B]</label>
                 <textcolor>white</textcolor>
-				    <font>font13</font>
+				<shadowcolor>black</shadowcolor>
+                <font>font13</font>
 				<align>right</align>
             </control>
             <control type="textbox" id="8003">
@@ -1602,7 +1653,6 @@
                 <label>Description</label>
                 <textcolor>white</textcolor>
                 <font>font13</font>
-				<align>justify</align>
                 <wrapmultiline>true</wrapmultiline>
                 <autoscroll time="3600" delay="6000" repeat="6000">true</autoscroll>
             </control>
@@ -1646,7 +1696,6 @@
                 <label>Description</label>
                 <textcolor>white</textcolor>
                 <font>font12</font>
-				<align>justify</align>
                 <wrapmultiline>true</wrapmultiline>
                 <autoscroll time="3600" delay="6000" repeat="6000">true</autoscroll>
                 <visible>false</visible>
@@ -1718,6 +1767,7 @@
                 <width>255</width>
                 <height>45</height>
                 <textcolor>white</textcolor>
+                <shadowcolor>22000000</shadowcolor>
                 <font>font24_title</font>
                 <align>right</align>
 				<visible>false</visible>
@@ -1730,6 +1780,7 @@
                 <height>50</height>
                 <label>[B]Title[/B]</label>
                 <textcolor>bbffffff</textcolor>
+                <shadowcolor>22000000</shadowcolor>
                 <font>font12</font>
                 <align>left</align>
                 <aligny>center</aligny>
@@ -1742,9 +1793,8 @@
                 <width>220</width>
                 <height>124</height>
                 <label>Description</label>
-                <textcolor>white</textcolor>
+                <textcolor>ffcccccc</textcolor>
                 <font>font12</font>
-				<align>justify</align>
                 <wrapmultiline>true</wrapmultiline>
                 <visible>false</visible>
                 <autoscroll time="2000" delay="1000" repeat="6000">true</autoscroll>
@@ -1778,13 +1828,14 @@
                 <height>50</height>
                 <label>[B]18:00 - 20:00[/B]</label>
                 <textcolor>bbffffff</textcolor>
+                <shadowcolor>22000000</shadowcolor>
                 <font>font12</font>
                 <align>left</align>
                 <aligny>top</aligny>
 				<visible>false</visible>
             </control>
 
-			<!-- Up Next -->
+			<!-- Up Next - Programme description -->
             <control type="label">
                 <description>Up Next label - Up Next</description>
                 <left>10</left>
@@ -1827,7 +1878,8 @@
                 <height>20</height>
                 <label>[B]18:00 - 20:00[/B]</label>
                 <textcolor>white</textcolor>
-				    <font>font13</font>
+				<shadowcolor>black</shadowcolor>
+                <font>font13</font>
 				<align>right</align>
 				<visible>false</visible>
             </control>
@@ -1839,7 +1891,6 @@
                 <height>120</height>
                 <textcolor>white</textcolor>
                 <font>font13</font>
-				<align>justify</align>
                 <wrapmultiline>true</wrapmultiline>
 				<autoscroll time="3600" delay="1000" repeat="3000">true</autoscroll>
             </control>
@@ -1964,7 +2015,8 @@
                     <width>180</width>
                     <height>60</height>
                     <textcolor>white</textcolor>
-                            <font>font13_title</font>
+                    <shadowcolor>black</shadowcolor>
+                    <font>font13_title</font>
                     <align>center</align>
                     <visible>true</visible>
                 </control>
@@ -1975,7 +2027,8 @@
                     <width>270</width>
                     <height>20</height>
                     <textcolor>white</textcolor>
-                            <font>font12</font>
+                    <shadowcolor>black</shadowcolor>
+                    <font>font12</font>
                     <align>right</align>
                     <visible>true</visible>
                     <label>$INFO[System.Date(DDD)], $INFO[System.Date(dd)] $INFO[System.Date(MMM)]</label>
@@ -1990,6 +2043,7 @@
                     <aligny>center</aligny>
                     <font>font13_title</font>
                     <textcolor>white</textcolor>
+                    <shadowcolor>black</shadowcolor>
                     <label>$INFO[System.Time(hh:mm)]</label>
                     <animation effect="slide" start="0,0" end="-40,0" time="75" condition="Window.IsVisible(Mutebug)">conditional</animation>
                 </control>
@@ -2087,6 +2141,7 @@
                     <width>176</width>
                     <height>40</height>
                     <textcolor>ddffffff</textcolor>
+                    <shadowcolor>-</shadowcolor>
                     <font>font13_title</font>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -2099,6 +2154,7 @@
                     <width>176</width>
                     <height>40</height>
                     <textcolor>ddffffff</textcolor>
+                    <shadowcolor>-</shadowcolor>
                     <font>font13_title</font>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -2111,6 +2167,7 @@
                     <width>176</width>
                     <height>40</height>
                     <textcolor>ddffffff</textcolor>
+                    <shadowcolor>-</shadowcolor>
                     <font>font13_title</font>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -2161,6 +2218,7 @@
                 <width>620</width>
                 <height>50</height>
                 <textcolor>eeffffff</textcolor>
+                <shadowcolor>22000000</shadowcolor>
                 <font>font14</font>
                 <align>center</align>
                 <aligny>top</aligny>
@@ -2211,9 +2269,8 @@
                 <top>519</top>
                 <width>898</width>
                 <height>142</height>
-                <textcolor>white</textcolor>
+                <textcolor>bbffffff</textcolor>
                 <font>font13</font>
-				<align>justify</align>
                 <wrapmultiline>true</wrapmultiline>
                 <visible>false</visible>
             </control>
@@ -2243,7 +2300,7 @@
                 <visible>false</visible>
             </control>
 
-			<!-- Quick EPG -->
+			<!-- Quick EPG Programme description -->
             <control type="image">
                 <description>background</description>
                 <left>0</left>

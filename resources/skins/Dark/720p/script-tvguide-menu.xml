@@ -8,18 +8,17 @@
         <top>0</top>
     </coordinates>
     <controls>
-		<!-- Background -->
+		<!-- Backing -->
 		<control type="image">
 			<description>Background</description>
             <left>0</left>
             <top>0</top>
             <width>1280</width>
             <height>720</height>
-			<aspectratio>scale</aspectratio>
-            <texture fallback="charcoal.jpg">$VAR[GlobalFanartVar]</texture>
+            <texture fallback="special://skin/extras/backgrounds/SKINDEFAULT.jpg">$VAR[GlobalFanartVar]</texture>
             <visible>true</visible>
         </control>
-        <!-- Header Image-->
+        <!-- Header Background-->
 		<control type="image">
 			<description>Header</description>
             <left>0</left>
@@ -29,70 +28,26 @@
             <texture>black-back.png</texture>
             <visible>true</visible>
         </control>
+		<!-- Footer Image -->
+		<control type="image">
+            <description>Footer</description>
+			<left>0</left>
+            <top>560</top>
+            <width>1280</width>
+            <height>160</height>
+            <texture>black-back.png</texture>
+            <visible>true</visible>
+        </control>
 		<!-- Main Image -->
 		<control type="image">
             <description>main</description>
 			<left>0</left>
             <top>60</top>
             <width>1280</width>
-            <height>660</height>
-            <texture>black-back.png</texture>
+            <height>498</height>
+            <texture fallback="special://skin/extras/backgrounds/SKINDEFAULT.jpg">$VAR[GlobalFanartVar]</texture>
 			<visible>true</visible>
-        </control>
-				
-		<!-- Video Preview -->
-		<control type="group">
-			<left>2</left>
-			<top>358</top>
-			<width>640</width>
-			<height>360</height>
-			<control type="image">
-				<description>Current/Preview background</description>
-				<left>0</left>
-				<top>0</top>
-				<width>640</width>
-				<height>360</height>
-				<texture>black-back.png</texture>
-				<visible>true</visible>
-			</control>
-			<control type="image">
-				<description>Current/Preview backup</description>
-				<left>0</left>
-				<top>0</top>
-				<width>640</width>
-				<height>360</height>
-				<aspectratio>keep</aspectratio>
-				<align>center</align>
-				<texture>tv.png</texture>
-				<visible>!Player.HasMedia</visible>
-			</control>
-			<control type="image" id="7002">
-				<description>Programme image</description>
-				<left>0</left>
-				<top>0</top>
-				<width>640</width>
-				<height>360</height>
-				<aspectratio>scale</aspectratio>
-				<texture>-</texture>
-				<visible>!Player.HasMedia</visible>
-			</control>
-			<control type="videowindow">
-				<description>Preview/Current Video</description>
-				<left>0</left>
-				<top>0</top>
-				<width>640</width>
-				<height>360</height>
-			</control>
-			<control type="image" id="4100">
-				<description>Channel logo</description>
-				<left>578</left>
-				<top>298</top>
-				<width>60</width>
-				<height>60</height>
-				<aspectratio>keep</aspectratio>
-				<visible>true</visible>
-			</control>
-		</control>
+        </control>			
 
 		<!-- Header - Date and time display -->
 		<control type="group">
@@ -108,6 +63,7 @@
 				<width>270</width>
 				<height>20</height>
 				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
 				<font>font12</font>
 				<align>right</align>
 				<label>$INFO[System.Date]</label>
@@ -122,6 +78,7 @@
 				<align>right</align>
 				<font>font13_title</font>
 				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
 				<label>$INFO[System.Time]</label>
 			</control>
 		</control>
@@ -134,6 +91,7 @@
 			<align>right</align>
 			<font>font13_title</font>
 			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
 			<label>$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
             <visible>Skin.HasSetting(show_weatherinfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na) + String.Contains(Weather.Conditions,/)]</visible>
 		</control>
@@ -148,7 +106,6 @@
             <texture colordiffuse="button_focus">weather/small/$INFO[Weather.FanartCode].png</texture>
             <visible>Skin.HasSetting(show_weatherinfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na) + String.Contains(Weather.Conditions,/)]</visible>
         </control>
-		
 		<!-- Programme Details -->
 		<control type="label" id="4101">
 			<description>Channel name</description>
@@ -190,20 +147,25 @@
 			<label></label>
 			<visible>false</visible>
 		</control>
-		<control type="label" id="7000">
-			<description>Programme description</description>
-			<width>620</width>
-			<height>260</height>
+		<control type="group">
 			<left>20</left>
-			<top>70</top>
-			<textcolor>white</textcolor>
-			<font>font13</font>
-			<align>justify</align>
-			<wrapmultiline>true</wrapmultiline>
-			<autoscroll time="3600" delay="6000" repeat="6000">true</autoscroll>
-			<label/>
-		</control>
-        
+            <top>70</top>
+			<control type="label" id="7000">
+				<description>Programme description</description>
+				<width>630</width>
+				<height>200</height>
+				<left>0</left>
+				<top>0</top>
+				<textcolor>white</textcolor>
+				<font>font13</font>
+				<align>left</align>
+				<aligny>top</aligny>
+				<wrapmultiline>true</wrapmultiline>
+				<autoscroll time="3600" delay="6000" repeat="6000">true</autoscroll>
+				<label/>
+			</control>
+        </control>
+
 		<!-- Category Group -->
 		<control type="group">
             <left>715</left>
@@ -269,8 +231,10 @@
 				<left>278</left>
 				<top>22</top>
 				<width>204</width>
-				<height>435</height>
+				<height>424</height>
 				<texture>menu-grey.png</texture>
+				<bordertexture>aqua.png</bordertexture>
+				<bordersize>2</bordersize>
 				<visible>true</visible>
 			</control>
 			<control type="image">
@@ -285,7 +249,8 @@
             <control type="image">
 				<description>Down arrow</description>
                 <left>278</left>
-                <top>481</top>
+                <top>465</top>
+                <top>465</top>
                 <width>204</width>
                 <height>-12</height>
 				<aspectratio>keep</aspectratio>
@@ -296,7 +261,7 @@
 				<left>280</left>
 				<top>25</top>
 				<width>200</width>
-				<height>430</height>
+				<height>420</height>
 				<visible>true</visible>
 				<onup>80003</onup>
 				<ondown>4006</ondown>
@@ -642,5 +607,55 @@
 				<visible>false</visible>
 			</control>
 		</control>
+
+		<!-- Video Preview -->
+		<control type="image">
+            <description>Current/Preview background</description>
+			<left>10</left>
+            <top>316</top>
+            <width>648</width>
+            <height>368</height>
+            <texture>menu-grey.png</texture>
+			<bordertexture>aqua.png</bordertexture>
+			<bordersize>2</bordersize>
+            <visible>true</visible>
+        </control>
+		<control type="image">
+			<description>Current/Preview backup</description>
+            <left>12</left>
+            <top>318</top>
+            <width>640</width>
+            <height>360</height>
+            <aspectratio>keep</aspectratio>
+			<align>center</align>
+            <texture>tv.png</texture>
+            <visible>!Player.HasMedia</visible>
+		</control>
+		<control type="image" id="7002">
+            <description>Programme image</description>
+            <left>14</left>
+            <top>320</top>
+            <width>640</width>
+            <height>360</height>
+            <aspectratio>scale</aspectratio>
+            <texture>-</texture>
+			<visible>!Player.HasMedia</visible>
+        </control>
+		<control type="videowindow">
+            <description>Preview/Current Video</description>
+			<left>14</left>
+            <top>320</top>
+            <width>640</width>
+            <height>360</height>
+        </control>
+        <control type="image" id="4100">
+            <description>Channel logo</description>
+            <left>594</left>
+            <top>618</top>
+            <width>60</width>
+            <height>60</height>
+            <aspectratio>keep</aspectratio>
+            <visible>true</visible>
+        </control>
     </controls>
 </window>
