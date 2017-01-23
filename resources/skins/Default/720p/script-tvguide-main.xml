@@ -1929,7 +1929,7 @@
             <posy>500</posy>
             <width>1280</width>
             <height>220</height>
-            <visible>!Control.IsVisible(6000)</visible>
+            <visible>![Control.IsVisible(6000)]+Control.IsVisible(5000)+Control.IsVisible(66000)</visible>
             <animation effect="fade" start="0" end="100" time="0">VisibleChange</animation>
 
             <control type="image">
@@ -2238,6 +2238,336 @@
                     <description>time label</description>
                     <posx>10r</posx>
                     <top>-495</top>
+                    <width>200</width>
+                    <height>30</height>
+                    <align>right</align>
+                    <aligny>center</aligny>
+                    <font>font28_title</font>
+                    <textcolor>white</textcolor>
+                    <shadowcolor>black</shadowcolor>
+                    <label>$INFO[System.Time]</label>
+                    <animation effect="slide" start="0,0" end="-40,0" time="75" condition="Window.IsVisible(Mutebug)">conditional</animation>
+                </control>
+
+        </control>
+
+        <control type="label" id="66000">
+            <description>visibility marker for OSD Big Info Window</description>
+        </control>
+        <control type="group">
+            <description>OSD Big Info Window</description>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>1280</width>
+            <height>720</height>
+            <visible>![Control.IsVisible(66000)]+Control.IsVisible(5000)</visible>
+            <animation effect="fade" start="0" end="100" time="0">VisibleChange</animation>
+
+            <control type="image">
+                <description>header</description>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>1280</width>
+                <height>50</height>
+                <texture>black-back.png</texture>
+                <visible>true</visible>
+            </control>
+
+            <control type="image">
+                <description>footer</description>
+                <posx>0</posx>
+                <posy>50</posy>
+                <width>1280</width>
+                <height>670</height>
+                <texture>black-back.png</texture>
+                <visible>true</visible>
+            </control>
+
+            <control type="button" id="6012">
+                <description>play</description>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>1280</width>
+                <height>680</height>
+                <label></label>
+                <font>font13</font>
+                <aligny>center</aligny>
+                <align>center</align>
+                <textcolor>grey</textcolor>
+                <focusedcolor>black</focusedcolor>
+                <texturefocus></texturefocus>
+                <texturenofocus></texturenofocus>
+            </control>
+
+<!-- OSD Mouse controls Vertical-->
+            <control type="label" id="6300">
+                <description>visibility marker for mouse control group</description>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>40</width>
+                <height>40</height>
+            </control>
+            <control type="group">
+                <visible>true</visible>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>1280</width>
+                <height>720</height>
+                <visible>!Control.IsVisible(6300)</visible>
+
+                  <control type="button">
+                    <description>Right</description>
+                    <posx>1250</posx>
+                    <posy>0</posy>
+                    <width>28</width>
+                    <height>28</height>
+                    <textcolor>ffffffff</textcolor>
+                    <font>font13</font>
+                    <label></label>
+                    <texturefocus>osd_right.png</texturefocus>
+                    <texturenofocus>osd_right.png</texturenofocus>
+                    <onclick>Right</onclick>
+                </control>
+
+                <control type="button">
+                    <description>Left</description>
+                    <posx>1210</posx>
+                    <posy>0</posy>
+                    <width>28</width>
+                    <height>28</height>
+                    <textcolor>ffffffff</textcolor>
+                    <font>font13</font>
+                    <label></label>
+                    <texturefocus>osd_left.png</texturefocus>
+                    <texturenofocus>osd_left.png</texturenofocus>
+                    <onclick>Left</onclick>
+                </control>
+
+                 <control type="button">
+                    <description>Up</description>
+                    <posx>1250</posx>
+                    <posy>70</posy>
+                    <width>28</width>
+                    <height>28</height>
+                    <textcolor>ffffffff</textcolor>
+                    <font>font13</font>
+                    <label></label>
+                    <texturefocus>osd_up.png</texturefocus>
+                    <texturenofocus>osd_up.png</texturenofocus>
+                    <onclick>Up</onclick>
+                </control>
+
+                <control type="button">
+                    <description>Down</description>
+                    <posx>1250</posx>
+                    <posy>105</posy>
+                    <width>28</width>
+                    <height>28</height>
+                    <textcolor>ffffffff</textcolor>
+                    <font>font13</font>
+                    <label></label>
+                    <texturefocus>osd_down.png</texturefocus>
+                    <texturenofocus>osd_down.png</texturenofocus>
+                    <onclick>Down</onclick>
+                </control>
+
+                <control type="button">
+                    <description>OK</description>
+                    <posx>1250</posx>
+                    <posy>140</posy>
+                    <width>28</width>
+                    <height>28</height>
+                    <textcolor>ffffffff</textcolor>
+                    <font>font13</font>
+                    <texturefocus>button_refresh.png</texturefocus>
+                    <texturenofocus>button_refresh.png</texturenofocus>
+                    <onclick>info</onclick>
+                    <onclick>down</onclick>
+                </control>
+
+                <control type="button">
+                    <description>Back to Main EPGHome Screen</description>
+                    <posx>1250</posx>
+                    <posy>180</posy>
+                    <width>28</width>
+                    <height>28</height>
+                    <textcolor>ffffffff</textcolor>
+                    <font>font13</font>
+                    <label></label>
+                    <texturefocus>back.png</texturefocus>
+                    <texturenofocus>back.png</texturenofocus>
+                    <onclick>Back</onclick>
+                </control>
+
+                <control type="button">
+                    <description>OSD Mouse controls Now All Channels</description>
+                    <posx>1150</posx>
+                    <posy>180</posy>
+                    <width>60</width>
+                    <height>28</height>
+                    <textcolor>grey</textcolor>
+                    <font>font10</font>
+                    <label>NOW</label>
+                    <texturefocus>-</texturefocus>
+                    <texturenofocus>-</texturenofocus>
+                    <onclick>info</onclick>
+                    <onclick>up</onclick>
+                </control>
+                <control type="button">
+                    <description>OSD Mouse controls Last Channel Info</description>
+                    <posx>1200</posx>
+                    <posy>180</posy>
+                    <width>50</width>
+                    <height>28</height>
+                    <textcolor>grey</textcolor>
+                    <font>font10</font>
+                    <label>LAST</label>
+                    <texturefocus>-</texturefocus>
+                    <texturenofocus>-</texturenofocus>
+                    <onclick>info</onclick>
+                    <onclick>left</onclick>
+                </control>
+            </control>
+
+            <!-- Program description -->
+            <control type="label" id="6001">
+                <description>Program title</description>
+                <posx>30</posx>
+                <posy>110</posy>
+                <width>594</width>
+                <height>30</height>
+                <label>[B]Title[/B]</label>
+                <textcolor>ffffffff</textcolor>
+                <font>font15</font>
+            </control>
+
+            <control type="label" id="6002">
+                <description>Program time</description>
+                <posx>386r</posx>
+                <posy>110</posy>
+                <width>130</width>
+                <height>30</height>
+                <label>[B]18:00 - 20:00[/B]</label>
+                <textcolor>ffffffff</textcolor>
+                <font>font15</font>
+                <align>right</align>
+
+            </control>
+            <control type="image" id="66004">
+                <description>Program channel logo</description>
+                <posx>5</posx>
+                <posy>5</posy>
+                <width>160</width>
+                <height>40</height>
+                <aspectratio>keep</aspectratio>
+                <colordiffuse>white</colordiffuse>
+            </control>
+            <control type="progress" id="66011">
+                <posx>764</posx>
+                <posy>140</posy>
+                <width>130</width>
+                <height>5</height>
+                <lefttexture></lefttexture>
+                <righttexture></righttexture>
+                <texturebg colordiffuse="white">tvg-button-nofocus.png</texturebg>
+                <midtexture colordiffuse="grey">tvg-button-focus.png</midtexture>
+                <visible>IntegerGreaterThan(Control.GetLabel(66011),0)</visible>
+            </control>
+            <control type="textbox" id="6003">
+                <description>Program description</description>
+                <posx>30</posx>
+                <posy>160</posy>
+                <width>864</width>
+                <height>421</height>
+                <label>Description</label>
+                <textcolor>ffffffff</textcolor>
+                <font>font14</font>
+                <wrapmultiline>true</wrapmultiline>
+                <autoscroll time="3600" delay="6000" repeat="6000">true</autoscroll>
+            </control>
+
+            <control type="label" id="6005">
+                <description>Program channel text</description>
+                <posx>30</posx>
+                <posy>70</posy>
+                <width>894</width>
+                <height>30</height>
+                <textcolor>grey</textcolor>
+                <font>font14_title</font>
+                <align></align>
+                <!--<visible>StringCompare(Control.GetLabel(6004),)</visible>-->
+                <visible>true</visible>
+            </control>
+
+            <control type="image" id="66006">
+                <description>Program image</description>
+                <posx>924</posx>
+                <posy>110</posy>
+                <width>296</width>
+                <height>177</height>
+                <aspectratio>keep</aspectratio>
+                <texture>tvg-tv.png</texture>
+                <visible>true</visible>
+            </control>
+
+            <control type="textbox" id="6007">
+                <description>Next Program description</description>
+                <posx>30</posx>
+                <posy>494</posy>
+                <width>864</width>
+                <height>124</height>
+                <label>Description</label>
+                <textcolor>ffcccccc</textcolor>
+                <font>font14</font>
+                <wrapmultiline>true</wrapmultiline>
+                <autoscroll time="3600" delay="6000" repeat="6000">true</autoscroll>
+                <visible>false</visible>
+            </control>
+
+            <control type="label" id="6008">
+                <description>Next Program title</description>
+                <posx>30</posx>
+                <posy>604</posy>
+                <width>594</width>
+                <height>30</height>
+                <label>[B]Title[/B]</label>
+                <textcolor>ffcccccc</textcolor>
+                <font>font15_title</font>
+                <aligny>center</aligny>
+                <visible>true</visible>
+            </control>
+
+            <control type="label" id="6009">
+                <description>Next Program time</description>
+                <posx>386r</posx>
+                <posy>604</posy>
+                <width>240</width>
+                <height>30</height>
+                <label>[B]18:00 - 20:00[/B]</label>
+                <textcolor>ddcccccc</textcolor>
+                <font>font15</font>
+                <align>right</align>
+                <aligny>top</aligny>
+                <visible>true</visible>
+            </control>
+
+            <control type="image" id="6010">
+                <description>Next Program image</description>
+                <posx>1045</posx>
+                <posy>50</posy>
+                <width>220</width>
+                <height>124</height>
+                <aspectratio>keep</aspectratio>
+                <texture>-</texture>
+                <visible>false</visible>
+            </control>
+
+
+
+                <control type="label">
+                    <description>time label</description>
+                    <posx>10r</posx>
+                    <top>5</top>
                     <width>200</width>
                     <height>30</height>
                     <align>right</align>
