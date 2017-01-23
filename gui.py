@@ -236,7 +236,7 @@ class TVGuide(xbmcgui.WindowXML):
     C_MAIN_OSD = 6000
     C_MAIN_OSD_BIG = 66000
     C_MAIN_OSD_BIG_CHANNEL_LOGO = 66004
-    C_MAIN_OSD_BIG_CHANNEL_IMAGE = 6006
+    C_MAIN_OSD_BIG_CHANNEL_IMAGE = 66006
     C_MAIN_OSD_BIG_PROGRESS = 66011
     C_MAIN_OSD_TITLE = 6001
     C_MAIN_OSD_TIME = 6002
@@ -629,7 +629,6 @@ class TVGuide(xbmcgui.WindowXML):
             self.onActionTVMode(action)
         elif self.mode == MODE_OSD:
             self.onActionOSDMode(action)
-            self.onActionOSDMode(action)
         elif self.mode == MODE_OSD_BIG:
             self.onActionOSDBigMode(action)
         elif self.mode == MODE_EPG:
@@ -691,6 +690,7 @@ class TVGuide(xbmcgui.WindowXML):
         elif action.getId() in COMMAND_ACTIONS["CLOSE"]:
             self._hideOsd()
             self._hideOsdBig()
+
         elif action.getId() in COMMAND_ACTIONS["PLAY"]:
             self._hideOsd()
             self.playOrChoose(self.osdProgram)
@@ -2868,6 +2868,7 @@ class TVGuide(xbmcgui.WindowXML):
     def _hideOsdBig(self):
         self.mode = MODE_TV
         self._hideControl(self.C_MAIN_OSD_BIG)
+
     def _hideLastPlayed(self):
         self.mode = MODE_TV
         self._hideControl(self.C_MAIN_LAST_PLAYED)
