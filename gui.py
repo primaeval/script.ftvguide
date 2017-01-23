@@ -795,6 +795,7 @@ class TVGuide(xbmcgui.WindowXML):
 
         elif action.getId() in COMMAND_ACTIONS["CHANNEL_LISTING"]:
             self.showListing(self.osdChannel)
+
     def onActionLastPlayedMode(self, action):
         if action.getId() == ACTION_MOUSE_MOVE:
             if ADDON.getSetting('mouse.controls') == "true":
