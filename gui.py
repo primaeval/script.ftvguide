@@ -5,7 +5,7 @@
 #      Modified for FTV Guide (09/2014 onwards)
 #      by Thomas Geppert [bluezed] - bluezed.apps@gmail.com
 #
-#      Modified for TV Guide Fullscreen (2016)
+#      Modified for Anova Guide (2016)
 #      by primaeval - primaeval.dev@gmail.com
 #
 #  This Program is free software; you can redistribute it and/or modify
@@ -420,8 +420,9 @@ class TVGuide(xbmcgui.WindowXML):
 
         # find nearest half hour
         self.viewStartDate = datetime.datetime.today()
-        self.viewStartDate -= datetime.timedelta(minutes=self.viewStartDate.minute % 30,
-                                                 seconds=self.viewStartDate.second)
+        self.viewStartDate -= \
+            datetime.timedelta(minutes=self.viewStartDate.minute % 30,
+                               seconds=self.viewStartDate.second)
 
         self.quickViewStartDate = datetime.datetime.today()
         self.quickViewStartDate -= datetime.timedelta(minutes=self.quickViewStartDate.minute % 30,
@@ -1139,14 +1140,14 @@ class TVGuide(xbmcgui.WindowXML):
                         elif result_type == 'tv':
                             xbmc.executebuiltin('RunScript(script.extendedinfo,info=extendedtvinfo,name=%s,id=%s)' % (program.title,id))
                     else:
-                        xbmcgui.Dialog().notification("TV Guide Fullscreen", "Couldn't find: %s" % title)
+                        xbmcgui.Dialog().notification("Anova Guide", "Couldn't find: %s" % title)
                 else:
                     if selection == 0:
                         xbmc.executebuiltin('RunScript(script.extendedinfo,info=extendedinfo,name=%s)' % (title))
                     elif selection == 1:
                         xbmc.executebuiltin('RunScript(script.extendedinfo,info=extendedtvinfo,name=%s)' % (program.title))
             else:
-                xbmcgui.Dialog().notification("TV Guide Fullscreen", "Couldn't find: %s" % title)
+                xbmcgui.Dialog().notification("Anova Guide", "Couldn't find: %s" % title)
         elif action.getId() in COMMAND_ACTIONS["UP"]:
             self._up(currentFocus)
         elif action.getId() in COMMAND_ACTIONS["DOWN"]:
@@ -1156,7 +1157,7 @@ class TVGuide(xbmcgui.WindowXML):
             kodi = float(xbmc.getInfoLabel("System.BuildVersion")[:4])
             dialog = xbmcgui.Dialog()
             if kodi < 16:
-                dialog.ok('TV Guide Fullscreen', 'Editing categories in Kodi %s is currently not supported.' % kodi)
+                dialog.ok('Anova Guide', 'Editing categories in Kodi %s is currently not supported.' % kodi)
             else:
                 cList = self.getControl(self.C_MAIN_CATEGORY)
                 item = cList.getSelectedItem()
@@ -2193,14 +2194,14 @@ class TVGuide(xbmcgui.WindowXML):
                         elif ttype == 'tv':
                             xbmc.executebuiltin('RunScript(script.extendedinfo,info=extendedtvinfo,name=%s,id=%s)' % (program.title,id))
                     else:
-                        xbmcgui.Dialog().notification("TV Guide Fullscreen", "Couldn't find: %s" % title)
+                        xbmcgui.Dialog().notification("Anova Guide", "Couldn't find: %s" % title)
                 else:
                     if selection == 0:
                         xbmc.executebuiltin('RunScript(script.extendedinfo,info=extendedinfo,name=%s)' % (title))
                     elif selection == 1:
                         xbmc.executebuiltin('RunScript(script.extendedinfo,info=extendedtvinfo,name=%s)' % (program.title))
             else:
-                xbmcgui.Dialog().notification("TV Guide Fullscreen", "Couldn't find: %s" % title)
+                xbmcgui.Dialog().notification("Anova Guide", "Couldn't find: %s" % title)
         elif buttonClicked == PopupMenu.C_POPUP_CATCHUP_ADDON:
             self.play_catchup(program)
 
@@ -4426,21 +4427,34 @@ class TVGuide(xbmcgui.WindowXML):
             control.setText(text)
 
     def updateTimebar(self, scheduleTimer=True):
+
         # move timebar to current time
+
         timeDelta = datetime.datetime.today() - self.viewStartDate
         control = self.getControl(self.C_MAIN_TIMEBAR)
         if control:
             (x, y) = control.getPosition()
             try:
+
                 # Sometimes raises:
                 # exceptions.RuntimeError: Unknown exception thrown from the call "setVisible"
-                self.setControlVisible(self.C_MAIN_TIMEBAR,timeDelta.days == 0)
-                control.setPosition(self._secondsToXposition(timeDelta.seconds), y)
-                self.timebar.setPosition(self._secondsToXposition(timeDelta.seconds), y)
+
+                control.setVisible(timeDelta.days == 0)
             except:
                 pass
+            control.setPosition(self._secondsToXposition(timeDelta.seconds),
+                                y)
 
-        if scheduleTimer and not xbmc.abortRequested and not self.isClosing:
+        if not self.player.isPlaying() and timeDelta.seconds > 1800 and timeDelta.seconds < 7200:
+            self.viewStartDate = datetime.datetime.today()
+            self.viewStartDate -= \
+                datetime.timedelta(minutes=self.viewStartDate.minute % 30,
+                                   seconds=self.viewStartDate.second)
+            self.onRedrawEPG(self.channelIdx, self.viewStartDate)
+            self.updateTimebar(scheduleTimer=True)
+
+        elif scheduleTimer and not xbmc.abortRequested \
+            and not self.isClosing:
             threading.Timer(1, self.updateTimebar).start()
 
     def updateQuickTimebar(self, scheduleTimer=True):
@@ -5665,7 +5679,7 @@ class StreamSetupDialog(xbmcgui.WindowXMLDialog):
                 title = item.getLabel()
                 self.database.setAltCustomStreamUrl(self.channel, title, stream)
                 d = xbmcgui.Dialog()
-                d.notification("TV Guide Fullscreen", title, sound=False, time=500)
+                d.notification("Anova Guide", title, sound=False, time=500)
 
         elif controlId == self.C_STREAM_BROWSE_OK:
             listControl = self.getControl(self.C_STREAM_BROWSE_STREAMS)
@@ -5682,7 +5696,7 @@ class StreamSetupDialog(xbmcgui.WindowXMLDialog):
                 title = item.getLabel()
                 self.database.setAltCustomStreamUrl(self.channel, title, stream)
                 d = xbmcgui.Dialog()
-                d.notification("TV Guide Fullscreen", title, sound=False, time=500)
+                d.notification("Anova Guide", title, sound=False, time=500)
 
 
         elif controlId == self.C_STREAM_FAVOURITES_OK:
@@ -5700,7 +5714,7 @@ class StreamSetupDialog(xbmcgui.WindowXMLDialog):
                 title = item.getLabel()
                 self.database.setAltCustomStreamUrl(self.channel, title, stream)
                 d = xbmcgui.Dialog()
-                d.notification("TV Guide Fullscreen", title, sound=False, time=500)
+                d.notification("Anova Guide", title, sound=False, time=500)
 
         elif controlId == self.C_STREAM_STRM_OK:
             self.database.setCustomStreamUrl(self.channel, self.strmFile)
@@ -6089,7 +6103,7 @@ class StreamSetupDialog(xbmcgui.WindowXMLDialog):
             title = "Added Folder"
         else:
             title = "Removed Folder"
-        d.notification("TV Guide Fullscreen", title, sound=False, time=500)
+        d.notification("Anova Guide", title, sound=False, time=500)
 
 
 class ChooseStreamAddonDialog(xbmcgui.WindowXMLDialog):
@@ -6389,7 +6403,7 @@ class CatMenu(xbmcgui.WindowXMLDialog):
             kodi = float(xbmc.getInfoLabel("System.BuildVersion")[:4])
             dialog = xbmcgui.Dialog()
             if kodi < 16:
-                dialog.ok('TV Guide Fullscreen', 'Editing categories in Kodi %s is currently not supported.' % kodi)
+                dialog.ok('Anova Guide', 'Editing categories in Kodi %s is currently not supported.' % kodi)
             else:
                 cList = self.getControl(self.C_CAT_CATEGORY)
                 item = cList.getSelectedItem()
@@ -6497,7 +6511,7 @@ class CatMenu(xbmcgui.WindowXMLDialog):
             kodi = float(xbmc.getInfoLabel("System.BuildVersion")[:4])
             dialog = xbmcgui.Dialog()
             if kodi < 16:
-                dialog.ok('TV Guide Fullscreen', 'Editing categories in Kodi %s is currently not supported.' % kodi)
+                dialog.ok('Anova Guide', 'Editing categories in Kodi %s is currently not supported.' % kodi)
             else:
                 cat = dialog.input('Add Category', type=xbmcgui.INPUT_ALPHANUM)
                 if cat:
